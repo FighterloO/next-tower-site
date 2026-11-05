@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Next Tower — Pertahanan Resonansi Elemen</title>
-<meta name="description" content="Next Tower: tower defense pixel yang santai dengan 6 hero elemen, reaksi elemen, ultimate, commander, dan kota untuk dibangun. Plane 1 gratis, buka semuanya sekali bayar.">
+<title>Next Tower — Elemental Resonance Defense</title>
+<meta name="description" content="Next Tower: a cute, laid-back pixel tower defense with 6 elemental heroes, element reactions, ultimates, commanders and a town to build. Plane 1 is free; unlock the rest with one purchase.">
 <link rel="canonical" href="https://fighterloo.github.io/next-tower-site/">
 <meta name="theme-color" content="#110c1f">
 <meta property="og:site_name" content="Next Tower">
-<meta property="og:title" content="Next Tower — Pertahanan Resonansi Elemen">
-<meta property="og:description" content="6 hero, 6 elemen, 15 reaksi. Tower defense pixel yang lucu dan santai dari Baihaqi Studio.">
+<meta property="og:title" content="Next Tower — Elemental Resonance Defense">
+<meta property="og:description" content="6 heroes, 6 elements, 15 reactions. A cute, laid-back pixel tower defense from Baihaqi Studio.">
 <meta property="og:image" content="https://fighterloo.github.io/next-tower-site/img/share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,27 +19,19 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/icon-192.png">
 <link rel="preload" href="fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611051">
-<script>
-  // the language before the page draws: ?lang=, then the last pick, else Indonesian
-  (function () {
-    var l = new URLSearchParams(location.search).get('lang');
-    try { l = l || localStorage.getItem('nt.lang'); } catch (e) {}
-    if (l === 'en' || l === 'id') document.documentElement.lang = l;
-  })();
-</script>
+<link rel="stylesheet" href="css/site.css?v=202611054">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "VideoGame",
  "name": "Next Tower",
- "alternateName": "Next Tower — Pertahanan Resonansi Elemen",
+ "alternateName": "Next Tower — Elemental Resonance Defense",
  "url": "https://fighterloo.github.io/next-tower-site/",
  "image": "https://fighterloo.github.io/next-tower-site/img/share.jpg",
  "description": "A cute pixel-art elemental hero tower defense: 6 heroes, one per element, element reactions, ultimates, commanders and a town to build.",
  "genre": ["Tower defense", "Strategy"],
  "gamePlatform": ["Android"],
- "inLanguage": ["id", "en"],
+ "inLanguage": ["en"],
  "author": {"@type": "Organization", "name": "Baihaqi Studio", "url": "https://fighterloo.github.io/"},
  "publisher": {"@type": "Organization", "name": "Baihaqi Studio", "url": "https://fighterloo.github.io/"}
 }
@@ -50,14 +42,14 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top"><img src="img/icon-192.png" alt="" width="32" height="32">NEXT TOWER</a>
-    <nav class="nav-links" aria-label="Bagian">
-      <a href="#hero"><span data-l="id">Hero</span><span data-l="en">Heroes</span></a>
-      <a href="#kota"><span data-l="id">Kota</span><span data-l="en">Town</span></a>
-      <a href="#plane">Plane</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#hero">Heroes</a>
+      <a href="#arena">Arena</a>
+      <a href="#kota">Town</a>
+      <a href="#plane">Planes</a>
       <a href="#video">Video</a>
-      <a href="#harga"><span data-l="id">Harga</span><span data-l="en">Price</span></a>
+      <a href="#harga">Price</a>
     </nav>
-    <button class="lang" type="button" id="lang" aria-label="Ganti bahasa / Switch language"><span data-l="id">EN</span><span data-l="en">ID</span></button>
   </div>
 </header>
 
@@ -71,43 +63,37 @@
       <div class="gems" aria-hidden="true">
         <img src="img/el/fire.svg" alt="" width="34" height="34"><img src="img/el/water.svg" alt="" width="34" height="34"><img src="img/el/lightning.svg" alt="" width="34" height="34"><img src="img/el/ice.svg" alt="" width="34" height="34"><img src="img/el/nature.svg" alt="" width="34" height="34"><img src="img/el/stone.svg" alt="" width="34" height="34">
       </div>
-      <h1 class="title"><span class="name">NEXT TOWER</span><span class="sr"> — </span><span class="sub">Pertahanan Resonansi Elemen</span></h1>
-      <p class="pitch">
-        <span data-l="id">Tower defense pixel yang lucu dan santai. Pasang hero elemen, campur elemennya, ledakkan reaksinya.</span>
-        <span data-l="en">A cute, laid-back pixel tower defense. Place elemental heroes, mix their elements, set off reactions.</span>
-      </p>
+      <h1 class="title"><span class="name">NEXT TOWER</span><span class="sr"> — </span><span class="sub">Elemental Resonance Defense</span></h1>
+      <p class="pitch">Mix elements. Set off reactions.</p>
       <ul class="chips">
-        <li><b>6</b> <span data-l="id">hero</span><span data-l="en">heroes</span></li>
-        <li><b>6</b> <span data-l="id">elemen</span><span data-l="en">elements</span></li>
-        <li><b>15</b> <span data-l="id">reaksi</span><span data-l="en">reactions</span></li>
-        <li><b>3</b> commander</li>
-        <li><b>3</b> plane</li>
-        <li>Offline</li>
+        <li><b>6</b> heroes</li>
+        <li><b>15</b> reactions</li>
+        <li><b>3</b> planes</li>
       </ul>
       <div class="cta">
-        <span class="btn btn-gold soon-btn" role="img" aria-label="Segera di Google Play / Coming soon to Google Play">
+        <span class="btn btn-gold soon-btn" role="img" aria-label="Coming soon to Google Play">
           <svg class="play-ico" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#2a1804" d="M2 1h2v1h2v1h2v1h2v1h1v2h-1v1H8v1H6v1H4v1H2z"/><path fill="#fff6d8" d="M3 3h1v1h2v1h2v2H6v1H4v1H3z"/></svg>
-          <span class="tx"><small data-l="id">SEGERA DI</small><small data-l="en">COMING SOON TO</small>GOOGLE PLAY</span>
+          <span class="tx"><small>COMING SOON TO</small>GOOGLE PLAY</span>
         </span>
-        <a class="btn" href="#harga"><span data-l="id">Plane 1 gratis</span><span data-l="en">Plane 1 free</span></a>
+        <a class="btn" href="#harga">Plane 1 free</a>
       </div>
     </div>
-    <div class="shot"><img src="img/reaction.webp" alt="Reaksi Arus Krio meledak di tengah enam hero" width="1280" height="720" fetchpriority="high"></div>
+    <div class="shot"><img src="img/reaction.webp" alt="Six heroes and a lightning burst on the forest road" width="1280" height="720" fetchpriority="high"></div>
   </div>
 </div>
 
 <!-- Heroes and elements -->
 <section id="hero" aria-labelledby="h-hero">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-hero"><span data-l="id">6 Hero · 6 Elemen</span><span data-l="en">6 Heroes · 6 Elements</span></h2></div>
-    <p class="lead"><span data-l="id">Satu hero per elemen. Naik rank, ganti job, dapat ultimate.</span><span data-l="en">One hero per element. Rank up, pick a job, unlock an ultimate.</span></p>
+    <div class="sec-head"><h2 id="h-hero">6 Heroes · 6 Elements</h2></div>
+    <p class="lead">One hero per element.</p>
     <ul class="heroes">
-      <li class="hero-card panel" style="--c:var(--fire)"><img class="por" src="img/heroes/ryn.png" alt="" width="136" height="136"><h3>RYN</h3><p><span data-l="id">Pengintai Bara</span><span data-l="en">Ember Scout</span></p><span class="el"><img src="img/el/fire.svg" alt="" width="20" height="20"><span data-l="id">Bara</span><span data-l="en">Fire</span></span></li>
-      <li class="hero-card panel" style="--c:var(--water)"><img class="por" src="img/heroes/mira.png" alt="" width="136" height="136"><h3>MIRA</h3><p><span data-l="id">Penjaga Ombak</span><span data-l="en">Tide Keeper</span></p><span class="el"><img src="img/el/water.svg" alt="" width="20" height="20"><span data-l="id">Air</span><span data-l="en">Water</span></span></li>
-      <li class="hero-card panel" style="--c:var(--lightning)"><img class="por" src="img/heroes/kael.png" alt="" width="136" height="136"><h3>KAEL</h3><p><span data-l="id">Ahli Badai</span><span data-l="en">Storm Adept</span></p><span class="el"><img src="img/el/lightning.svg" alt="" width="20" height="20"><span data-l="id">Petir</span><span data-l="en">Lightning</span></span></li>
-      <li class="hero-card panel" style="--c:var(--ice)"><img class="por" src="img/heroes/sora.png" alt="" width="136" height="136"><h3>SORA</h3><p><span data-l="id">Pengawal Es</span><span data-l="en">Frost Warden</span></p><span class="el"><img src="img/el/ice.svg" alt="" width="20" height="20"><span data-l="id">Es</span><span data-l="en">Ice</span></span></li>
-      <li class="hero-card panel" style="--c:var(--nature)"><img class="por" src="img/heroes/liora.png" alt="" width="136" height="136"><h3>LIORA</h3><p><span data-l="id">Saudari Rimba</span><span data-l="en">Grove Sister</span></p><span class="el"><img src="img/el/nature.svg" alt="" width="20" height="20"><span data-l="id">Alam</span><span data-l="en">Nature</span></span></li>
-      <li class="hero-card panel" style="--c:var(--stone)"><img class="por" src="img/heroes/bram.png" alt="" width="136" height="136"><h3>BRAM</h3><p><span data-l="id">Perisai Batu</span><span data-l="en">Stone Shield</span></p><span class="el"><img src="img/el/stone.svg" alt="" width="20" height="20"><span data-l="id">Batu</span><span data-l="en">Stone</span></span></li>
+      <li class="hero-card panel" style="--c:var(--fire)"><img class="por" src="img/heroes/ryn.png" alt="" width="136" height="136"><h3>RYN</h3><p>Ember Scout</p><span class="el"><img src="img/el/fire.svg" alt="" width="20" height="20">Fire</span></li>
+      <li class="hero-card panel" style="--c:var(--water)"><img class="por" src="img/heroes/mira.png" alt="" width="136" height="136"><h3>MIRA</h3><p>Tide Keeper</p><span class="el"><img src="img/el/water.svg" alt="" width="20" height="20">Water</span></li>
+      <li class="hero-card panel" style="--c:var(--lightning)"><img class="por" src="img/heroes/kael.png" alt="" width="136" height="136"><h3>KAEL</h3><p>Storm Adept</p><span class="el"><img src="img/el/lightning.svg" alt="" width="20" height="20">Lightning</span></li>
+      <li class="hero-card panel" style="--c:var(--ice)"><img class="por" src="img/heroes/sora.png" alt="" width="136" height="136"><h3>SORA</h3><p>Frost Warden</p><span class="el"><img src="img/el/ice.svg" alt="" width="20" height="20">Ice</span></li>
+      <li class="hero-card panel" style="--c:var(--nature)"><img class="por" src="img/heroes/liora.png" alt="" width="136" height="136"><h3>LIORA</h3><p>Grove Sister</p><span class="el"><img src="img/el/nature.svg" alt="" width="20" height="20">Nature</span></li>
+      <li class="hero-card panel" style="--c:var(--stone)"><img class="por" src="img/heroes/bram.png" alt="" width="136" height="136"><h3>BRAM</h3><p>Stone Shield</p><span class="el"><img src="img/el/stone.svg" alt="" width="20" height="20">Stone</span></li>
     </ul>
   </div>
 </section>
@@ -115,32 +101,30 @@
 <!-- Reactions and ultimates -->
 <section id="reaksi" aria-labelledby="h-react">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-react"><span data-l="id">Reaksi + Ultimate</span><span data-l="en">Reactions + Ultimates</span></h2></div>
+    <div class="sec-head"><h2 id="h-react">Reactions + Ultimates</h2></div>
     <div class="feat">
-      <div class="shot"><img src="img/snow-battle.webp" alt="Reaksi Spora Petir di Plane 3" width="1280" height="720" loading="lazy"></div>
+      <div class="shot"><img src="img/snow-battle.webp" alt="Element reactions in a snow battle" width="1280" height="720" loading="lazy"></div>
       <div class="feat-body panel">
-        <h3><span data-l="id">Campur elemen</span><span data-l="en">Mix elements</span></h3>
+        <h3>Mix elements</h3>
         <ul class="recipes">
-          <li><img src="img/el/fire.svg" alt="Bara" width="22" height="22"><i>+</i><img src="img/el/water.svg" alt="Air" width="22" height="22"><b><span data-l="id">Uap Panas</span><span data-l="en">Scalding Steam</span></b></li>
-          <li><img src="img/el/water.svg" alt="Air" width="22" height="22"><i>+</i><img src="img/el/ice.svg" alt="Es" width="22" height="22"><b><span data-l="id">Tembok Es</span><span data-l="en">Frost Wall</span></b></li>
-          <li><img src="img/el/lightning.svg" alt="Petir" width="22" height="22"><i>+</i><img src="img/el/ice.svg" alt="Es" width="22" height="22"><b><span data-l="id">Arus Krio</span><span data-l="en">Cryo Current</span></b></li>
-          <li><img src="img/el/lightning.svg" alt="Petir" width="22" height="22"><i>+</i><img src="img/el/nature.svg" alt="Alam" width="22" height="22"><b><span data-l="id">Spora Petir</span><span data-l="en">Volt Spores</span></b></li>
+          <li><img src="img/el/fire.svg" alt="Fire" width="22" height="22"><i>+</i><img src="img/el/water.svg" alt="Water" width="22" height="22"><b>Scalding Steam</b></li>
+          <li><img src="img/el/water.svg" alt="Water" width="22" height="22"><i>+</i><img src="img/el/ice.svg" alt="Ice" width="22" height="22"><b>Frost Wall</b></li>
+          <li><img src="img/el/lightning.svg" alt="Lightning" width="22" height="22"><i>+</i><img src="img/el/ice.svg" alt="Ice" width="22" height="22"><b>Cryo Current</b></li>
+          <li><img src="img/el/lightning.svg" alt="Lightning" width="22" height="22"><i>+</i><img src="img/el/nature.svg" alt="Nature" width="22" height="22"><b>Volt Spores</b></li>
         </ul>
         <div class="stats">
-          <div class="stat"><b>15</b><span data-l="id">reaksi</span><span data-l="en">reactions</span></div>
+          <div class="stat"><b>15</b>reactions</div>
           <div class="stat"><b>10</b><span>finisher</span></div>
         </div>
       </div>
     </div>
     <div class="feat flip">
-      <div class="shot"><img src="img/ultimate.webp" alt="Ultimate Phoenix Kembar dan Taring Bulan" width="1280" height="720" loading="lazy"></div>
+      <div class="shot"><img src="img/ultimate.webp" alt="Two ultimates going off at once" width="1280" height="720" loading="lazy"></div>
       <div class="feat-body panel">
         <h3>Ultimate</h3>
         <ul class="ticks">
-          <li><span data-l="id">Tiap job punya ultimate sendiri</span><span data-l="en">Every job has its own ultimate</span></li>
-          <li><span data-l="id">2 bentuk ultimate per job</span><span data-l="en">2 ultimate forms per job</span></li>
-          <li><span data-l="id">Duo ultimate: dua hero sekaligus</span><span data-l="en">Duo ultimate: two heroes at once</span></li>
-          <li><span data-l="id">Pagi, sore, malam: tiap waktu beda aturan</span><span data-l="en">Morning, evening, night: new rules each time</span></li>
+          <li>One per job</li>
+          <li>Duo: two heroes at once</li>
         </ul>
       </div>
     </div>
@@ -152,13 +136,13 @@
   <div class="wrap">
     <div class="sec-head"><h2 id="h-cmd">Commander</h2></div>
     <div class="feat">
-      <div class="shot"><img src="img/markas.webp" alt="Markas Commander" width="1280" height="720" loading="lazy"></div>
+      <div class="shot"><img src="img/commander.webp" alt="Rara drops turrets beside the heroes" width="1280" height="720" loading="lazy"></div>
       <div class="feat-body panel">
-        <h3><span data-l="id">Turun tangan sendiri</span><span data-l="en">Step in yourself</span></h3>
+        <h3>Step in yourself</h3>
         <ul class="cmds">
-          <li><img class="px" src="img/cmd/elang.png" alt="" width="40" height="40"><span><b>ELANG</b><small><span data-l="id">Penembak Jitu · teropong</span><span data-l="en">Sniper · scope shot</span></small></span><span class="tag free"><span data-l="id">GRATIS</span><span data-l="en">FREE</span></span></li>
-          <li><img class="px" src="img/cmd/kage.png" alt="" width="40" height="40"><span><b>KAGE</b><small><span data-l="id">Ninja · tebasan</span><span data-l="en">Ninja · blade swipes</span></small></span><span></span></li>
-          <li><img class="px" src="img/cmd/rara.png" alt="" width="40" height="40"><span><b>RARA</b><small><span data-l="id">Montir · turet</span><span data-l="en">Mechanic · turrets</span></small></span><span></span></li>
+          <li><img class="px" src="img/cmd/elang.png" alt="" width="40" height="40"><span><b>HAWK</b><small>Sniper</small></span><span class="tag free">FREE</span></li>
+          <li><img class="px" src="img/cmd/kage.png" alt="" width="40" height="40"><span><b>KAGE</b><small>Ninja</small></span><span></span></li>
+          <li><img class="px" src="img/cmd/rara.png" alt="" width="40" height="40"><span><b>RARA</b><small>Mechanic</small></span><span></span></li>
         </ul>
       </div>
     </div>
@@ -168,16 +152,31 @@
 <!-- Town -->
 <section id="kota" aria-labelledby="h-town">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-town"><span data-l="id">Bangun Kotamu</span><span data-l="en">Build Your Town</span></h2></div>
-    <p class="lead"><span data-l="id">Pulang dari medan perang, kuatkan hero di kota.</span><span data-l="en">Back from battle, power up your heroes in town.</span></p>
-    <div class="shot town-big"><img src="img/town.webp" alt="Kota dengan Balai Kota, Aula Hero, Bengkel, Toko dan Perpustakaan" width="1600" height="900" loading="lazy"></div>
+    <div class="sec-head"><h2 id="h-town">Build Your Town</h2></div>
+    <p class="lead">Power up between battles.</p>
+    <div class="shot town-big"><img src="img/town.webp" alt="The town: Town Hall, Hero Hall, Forge, Shop and Library" width="1600" height="900" loading="lazy"></div>
+    <ul class="blds">
+      <li class="panel"><b>Forge</b></li>
+      <li class="panel"><b>Hero Hall</b></li>
+      <li class="panel"><b>Library</b></li>
+      <li class="panel"><b>Bounty Board</b></li>
+      <li class="panel"><b>Shop</b></li>
+      <li class="panel"><b>Command Post</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Arena -->
+<section id="arena" aria-labelledby="h-arena">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-arena">In the Arena</h2></div>
     <ul class="gallery">
-      <li><figure><div class="shot"><img src="img/bengkel.webp" alt="" width="1280" height="720" loading="lazy"></div><figcaption>Bengkel <span data-l="id">enhance + enchant</span><span data-l="en">enhance + enchant</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/aula.webp" alt="" width="1280" height="720" loading="lazy"></div><figcaption>Aula Hero <span data-l="id">level + talenta</span><span data-l="en">levels + talents</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/perpustakaan.webp" alt="" width="1280" height="720" loading="lazy"></div><figcaption>Perpustakaan <span data-l="id">wiki semua reaksi</span><span data-l="en">wiki of every reaction</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/bounty.webp" alt="" width="1280" height="720" loading="lazy"></div><figcaption>Papan Bounty <span data-l="id">misi + hadiah</span><span data-l="en">missions + rewards</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/toko.webp" alt="" width="1280" height="720" loading="lazy"></div><figcaption>Toko <span data-l="id">ramuan + alat</span><span data-l="en">potions + tools</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/boss.webp" alt="" width="1280" height="720" loading="lazy"></div><figcaption><b data-l="id">Bos</b><b data-l="en">Bosses</b> <span data-l="id">tiap akhir plane</span><span data-l="en">at every plane's end</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-forest-day.webp" alt="Six heroes holding the forest road" width="1280" height="720" loading="lazy"></div><figcaption>Forest <span>day</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-forest-night.webp" alt="A boss arrives in the forest at night" width="1280" height="720" loading="lazy"></div><figcaption>Forest <span>night · boss</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-desert-day.webp" alt="The Kraken's Maw ultimate on the desert road" width="1280" height="720" loading="lazy"></div><figcaption>Desert <span>day</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-desert-evening.webp" alt="Ultimates in a desert evening" width="1280" height="720" loading="lazy"></div><figcaption>Desert <span>evening</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-snow-day.webp" alt="A boss fight in the snow" width="1280" height="720" loading="lazy"></div><figcaption>Snow <span>day · boss</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-snow-evening.webp" alt="An evening battle in the snow" width="1280" height="720" loading="lazy"></div><figcaption>Snow <span>evening</span></figcaption></figure></li>
     </ul>
   </div>
 </section>
@@ -185,28 +184,28 @@
 <!-- Planes -->
 <section id="plane" aria-labelledby="h-plane">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-plane">Plane</h2></div>
-    <p class="lead"><span data-l="id">Tiap plane: beberapa Hari, tiap Hari pagi · sore · malam, lalu bos.</span><span data-l="en">Each plane: a few Days, each Day morning · evening · night, then a boss.</span></p>
+    <div class="sec-head"><h2 id="h-plane">Planes</h2></div>
+    <p class="lead">Day · evening · night, then a boss.</p>
     <ul class="planes">
       <li class="plane panel">
-        <div class="plane-art"><img src="img/plane1.webp" alt="" width="800" height="450" loading="lazy"><span class="tag free"><span data-l="id">GRATIS</span><span data-l="en">FREE</span></span></div>
-        <div class="plane-body"><span class="n">PLANE 1</span><h3><span data-l="id">Hutan</span><span data-l="en">Forest</span></h3><div class="days"><span>5 <span data-l="id">Hari</span><span data-l="en">Days</span></span><span><span data-l="id">Tersedia</span><span data-l="en">Out now</span></span></div></div>
+        <div class="plane-art"><img src="img/plane1.webp" alt="" width="800" height="450" loading="lazy"><span class="tag free">FREE</span></div>
+        <div class="plane-body"><span class="n">PLANE 1</span><h3>Forest</h3><div class="days"><span>5 Days</span><span>Out now</span></div></div>
       </li>
       <li class="plane panel">
         <div class="plane-art"><img src="img/plane2.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
-        <div class="plane-body"><span class="n">PLANE 2</span><h3><span data-l="id">Gurun</span><span data-l="en">Desert</span></h3><div class="days"><span>7 <span data-l="id">Hari</span><span data-l="en">Days</span></span><span><span data-l="id">Tersedia</span><span data-l="en">Out now</span></span></div></div>
+        <div class="plane-body"><span class="n">PLANE 2</span><h3>Desert</h3><div class="days"><span>7 Days</span><span>Out now</span></div></div>
       </li>
       <li class="plane panel">
         <div class="plane-art"><img src="img/plane3.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
-        <div class="plane-body"><span class="n">PLANE 3</span><h3><span data-l="id">Salju</span><span data-l="en">Snow</span></h3><div class="days"><span>7 <span data-l="id">Hari</span><span data-l="en">Days</span></span><span><span data-l="id">Tersedia</span><span data-l="en">Out now</span></span></div></div>
+        <div class="plane-body"><span class="n">PLANE 3</span><h3>Snow</h3><div class="days"><span>7 Days</span><span>Out now</span></div></div>
       </li>
       <li class="plane panel locked">
-        <div class="plane-art"><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M3 1h6v1h1v4h1v6H1V6h1V2h1zm1 2v3h4V3z"/><path fill="#b9a888" d="M4 2h4v1H4zM3 3h1v3H3zm5 0h1v3H8zM2 7h8v4H2z"/><path fill="#f2c75c" d="M2 7h8v1H2z"/><path fill="#1a1006" d="M5 8h2v2H5z"/></svg><span class="tag soon"><span data-l="id">SEGERA</span><span data-l="en">SOON</span></span></div>
-        <div class="plane-body"><span class="n">PLANE 4</span><h3>???</h3><p><span data-l="id">Segera hadir</span><span data-l="en">Coming soon</span></p></div>
+        <div class="plane-art"><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M3 1h6v1h1v4h1v6H1V6h1V2h1zm1 2v3h4V3z"/><path fill="#b9a888" d="M4 2h4v1H4zM3 3h1v3H3zm5 0h1v3H8zM2 7h8v4H2z"/><path fill="#f2c75c" d="M2 7h8v1H2z"/><path fill="#1a1006" d="M5 8h2v2H5z"/></svg><span class="tag soon">SOON</span></div>
+        <div class="plane-body"><span class="n">PLANE 4</span><h3>???</h3><p>Coming soon</p></div>
       </li>
       <li class="plane panel locked">
-        <div class="plane-art"><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M3 1h6v1h1v4h1v6H1V6h1V2h1zm1 2v3h4V3z"/><path fill="#b9a888" d="M4 2h4v1H4zM3 3h1v3H3zm5 0h1v3H8zM2 7h8v4H2z"/><path fill="#f2c75c" d="M2 7h8v1H2z"/><path fill="#1a1006" d="M5 8h2v2H5z"/></svg><span class="tag soon"><span data-l="id">SEGERA</span><span data-l="en">SOON</span></span></div>
-        <div class="plane-body"><span class="n">PLANE 5</span><h3>???</h3><p><span data-l="id">Segera hadir</span><span data-l="en">Coming soon</span></p></div>
+        <div class="plane-art"><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M3 1h6v1h1v4h1v6H1V6h1V2h1zm1 2v3h4V3z"/><path fill="#b9a888" d="M4 2h4v1H4zM3 3h1v3H3zm5 0h1v3H8zM2 7h8v4H2z"/><path fill="#f2c75c" d="M2 7h8v1H2z"/><path fill="#1a1006" d="M5 8h2v2H5z"/></svg><span class="tag soon">SOON</span></div>
+        <div class="plane-body"><span class="n">PLANE 5</span><h3>???</h3><p>Coming soon</p></div>
       </li>
     </ul>
   </div>
@@ -215,13 +214,12 @@
 <!-- Tower mode -->
 <section id="menara" aria-labelledby="h-tower">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-tower"><span data-l="id">Mode Menara</span><span data-l="en">Tower Mode</span></h2></div>
+    <div class="sec-head"><h2 id="h-tower">Tower Mode</h2></div>
     <div class="tower panel">
       <svg viewBox="0 0 20 28" shape-rendering="crispEdges" aria-hidden="true"><path fill="#5a4a32" d="M9 0h1v6H9z"/><path fill="#a868ff" d="M10 0h4v3h-4z"/><path fill="#d2b0ff" d="M10 0h3v1h-3z"/><path fill="#e3b458" d="M8 5h4v1h1v1h1v1h1v1H5V8h1V7h1V6h1z"/><path fill="#fff0b8" d="M8 5h2v1H8zM7 6h2v1H7zM6 7h2v1H6zM5 8h2v1H5z"/><path fill="#9a6a24" d="M12 6h1v1h1v1h1v1h-2V8h-1z"/><path fill="#8a5a1c" d="M4 9h12v2H4z"/><path fill="#f2c75c" d="M4 9h12v1H4z"/><path fill="#4a3d6b" d="M5 11h10v14H5z"/><path fill="#6a5a94" d="M5 11h2v14H5z"/><path fill="#352a52" d="M13 11h2v14h-2z"/><path fill="#2a2142" d="M5 15h10v1H5zM5 19h10v1H5zM9 11h1v4H9zM7 16h1v3H7zM11 16h1v3h-1z"/><path fill="#ffd84a" d="M10 12h2v2h-2zM8 17h2v1H8z"/><path fill="#fff3a8" d="M10 12h1v1h-1z"/><path fill="#2a1804" d="M9 21h2v1h1v3H8v-3h1z"/><path fill="#8a5a1c" d="M3 25h14v2H3z"/><path fill="#c79a6a" d="M3 25h14v1H3z"/></svg>
       <div>
-        <span class="tag soon"><span data-l="id">SEGERA HADIR</span><span data-l="en">COMING SOON</span></span>
-        <h3><span data-l="id">Daki menaranya</span><span data-l="en">Climb the tower</span></h3>
-        <p><span data-l="id">Lantai demi lantai, makin tinggi makin seru.</span><span data-l="en">Floor by floor, tougher the higher you go.</span></p>
+        <span class="tag soon">COMING SOON</span>
+        <h3>Climb the tower</h3>
         <div class="floors" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>?</span></div>
       </div>
     </div>
@@ -233,8 +231,8 @@
   <div class="wrap">
     <div class="sec-head"><h2 id="h-video">Video</h2></div>
     <div class="videos">
-      <div class="vid panel"><img src="img/forest-battle.webp" alt="" width="1280" height="720" loading="lazy"><div class="in"><span class="pl" aria-hidden="true"></span><h3>Trailer</h3><span class="tag soon"><span data-l="id">SEGERA HADIR</span><span data-l="en">COMING SOON</span></span></div></div>
-      <div class="vid panel"><img src="img/night.webp" alt="" width="1280" height="720" loading="lazy"><div class="in"><span class="pl" aria-hidden="true"></span><h3>Gameplay</h3><span class="tag soon"><span data-l="id">SEGERA HADIR</span><span data-l="en">COMING SOON</span></span></div></div>
+      <div class="vid panel"><img src="img/forest-battle.webp" alt="" width="1280" height="720" loading="lazy"><div class="in"><span class="pl" aria-hidden="true"></span><h3>Trailer</h3><span class="tag soon">COMING SOON</span></div></div>
+      <div class="vid panel"><img src="img/night.webp" alt="" width="1280" height="720" loading="lazy"><div class="in"><span class="pl" aria-hidden="true"></span><h3>Gameplay</h3><span class="tag soon">COMING SOON</span></div></div>
     </div>
   </div>
 </section>
@@ -242,33 +240,33 @@
 <!-- Price -->
 <section id="harga" aria-labelledby="h-price">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-price"><span data-l="id">Harga</span><span data-l="en">Price</span></h2></div>
+    <div class="sec-head"><h2 id="h-price">Price</h2></div>
     <div class="price">
       <div class="tier panel">
-        <h3><span class="tag free"><span data-l="id">GRATIS</span><span data-l="en">FREE</span></span><span data-l="id">Coba dulu</span><span data-l="en">Try it</span></h3>
-        <p class="amt">Rp 0<small><span data-l="id">Plane 1 penuh</span><span data-l="en">All of Plane 1</span></small></p>
+        <h3><span class="tag free">FREE</span>Try it</h3>
+        <p class="amt">Rp 0<small>All of Plane 1</small></p>
         <ul class="ticks">
-          <li>Plane 1 <span data-l="id">(Hutan)</span><span data-l="en">(Forest)</span></li>
-          <li><span data-l="id">6 hero, semua reaksi</span><span data-l="en">6 heroes, every reaction</span></li>
-          <li><span data-l="id">Commander Elang</span><span data-l="en">Elang the commander</span></li>
-          <li class="no"><span data-l="id">Kota tertutup</span><span data-l="en">Town closed</span></li>
+          <li>Plane 1 (Forest)</li>
+          <li>6 heroes</li>
+          <li>Hawk the commander</li>
+          <li class="no">Town closed</li>
         </ul>
       </div>
       <div class="tier panel best">
-        <h3><span class="tag">PREMIUM</span><span data-l="id">Buka semua</span><span data-l="en">Unlock all</span></h3>
-        <p class="amt">Rp 35.000<small>US$3 · <span data-l="id">sekali bayar</span><span data-l="en">one-time</span></small></p>
+        <h3><span class="tag">PREMIUM</span>Unlock all</h3>
+        <p class="amt">Rp 35.000<small>US$3 · one-time</small></p>
         <ul class="ticks">
-          <li><span data-l="id">Semua plane</span><span data-l="en">Every plane</span></li>
-          <li><span data-l="id">Kota: Bengkel, Aula Hero, Toko…</span><span data-l="en">Town: Bengkel, Aula Hero, Toko…</span></li>
-          <li><span data-l="id">3 commander</span><span data-l="en">3 commanders</span></li>
-          <li><span data-l="id">Tanpa DLC</span><span data-l="en">No DLC</span></li>
+          <li>Every plane</li>
+          <li>The town</li>
+          <li>3 commanders</li>
+          <li>No DLC</li>
         </ul>
       </div>
     </div>
     <div class="store">
-      <span class="btn btn-gold soon-btn" role="img" aria-label="Segera di Google Play / Coming soon to Google Play">
+      <span class="btn btn-gold soon-btn" role="img" aria-label="Coming soon to Google Play">
         <svg class="play-ico" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#2a1804" d="M2 1h2v1h2v1h2v1h2v1h1v2h-1v1H8v1H6v1H4v1H2z"/><path fill="#fff6d8" d="M3 3h1v1h2v1h2v2H6v1H4v1H3z"/></svg>
-        <span class="tx"><small data-l="id">SEGERA DI</small><small data-l="en">COMING SOON TO</small>GOOGLE PLAY</span>
+        <span class="tx"><small>COMING SOON TO</small>GOOGLE PLAY</span>
       </span>
     </div>
   </div>
@@ -281,13 +279,12 @@
     <img src="img/icon-192.png" alt="" width="44" height="44" loading="lazy">
     <p class="foot-links">
       <a href="https://fighterloo.github.io/">Baihaqi Studio</a>
-      <a href="privacy.html"><span data-l="id">Kebijakan Privasi</span><span data-l="en">Privacy Policy</span></a>
+      <a href="privacy.html">Privacy Policy</a>
       <a href="mailto:supeersaiyan15@gmail.com">supeersaiyan15@gmail.com</a>
     </p>
     <p class="fine">© 2026 Baihaqi Studio · Font: Silkscreen (<a href="fonts/OFL.txt">OFL</a>)</p>
   </div>
 </footer>
 
-<script src="js/site.js?v=202611051" defer></script>
 </body>
 </html>
