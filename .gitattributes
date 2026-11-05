@@ -1,0 +1,5 @@
+*.sh text eol=lf
+*.ttf binary
+*.webp binary
+*.png binary
+*.jpg binary
