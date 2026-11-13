@@ -3,35 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Next Tower — Elemental Resonance Defense</title>
-<meta name="description" content="Next Tower: a cute, laid-back pixel tower defense with 6 elemental heroes, element reactions, ultimates, commanders and a town to build. Plane 1 is free; unlock the rest with one purchase.">
+<title>Next Tower: Tower Defense · 6 Heroes, 6 Elements</title>
+<meta name="description" content="Next Tower is a cute pixel-art tower defense for Android: 6 elemental heroes, 15 reactions, 5 commanders, 5 planes, the Rift Tower, puzzles and minigames. Plane 1 free, no ads, unlock all once for US$3.">
 <link rel="canonical" href="https://fighterloo.github.io/next-tower-site/">
 <meta name="theme-color" content="#110c1f">
 <meta property="og:site_name" content="Next Tower">
-<meta property="og:title" content="Next Tower — Elemental Resonance Defense">
-<meta property="og:description" content="6 heroes, 6 elements, 15 reactions. A cute, laid-back pixel tower defense from Baihaqi Studio.">
+<meta property="og:title" content="Next Tower: Tower Defense">
+<meta property="og:description" content="6 heroes, 6 elements, 15 reactions. A cute pixel tower defense from Baihaqi Studio. Plane 1 free, no ads.">
 <meta property="og:image" content="https://fighterloo.github.io/next-tower-site/img/share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://fighterloo.github.io/next-tower-site/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="img/icon-192.png">
+<meta name="twitter:title" content="Next Tower: Tower Defense">
+<meta name="twitter:image" content="https://fighterloo.github.io/next-tower-site/img/share.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="icon" href="favicon-192x192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611057">
+<link rel="stylesheet" href="css/site.css?v=202611131">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "VideoGame",
  "name": "Next Tower",
- "alternateName": "Next Tower — Elemental Resonance Defense",
+ "alternateName": "Next Tower: Tower Defense",
  "url": "https://fighterloo.github.io/next-tower-site/",
  "image": "https://fighterloo.github.io/next-tower-site/img/share.jpg",
- "description": "A cute pixel-art elemental hero tower defense: 6 heroes, one per element, element reactions, ultimates, commanders and a town to build.",
+ "description": "A cute pixel-art tower defense: 6 heroes, one per element, 15 reactions, 5 commanders, 5 planes, the Rift Tower, puzzles and minigames. Plane 1 free, unlock everything with one purchase.",
  "genre": ["Tower defense", "Strategy"],
  "gamePlatform": ["Android"],
- "inLanguage": ["en"],
+ "operatingSystem": "Android",
+ "inLanguage": ["en", "id", "ja"],
+ "offers": {"@type": "Offer", "price": "3.00", "priceCurrency": "USD", "description": "One-time unlock: Planes 2-5, every building level, every commander"},
  "author": {"@type": "Organization", "name": "Baihaqi Studio", "url": "https://fighterloo.github.io/"},
  "publisher": {"@type": "Organization", "name": "Baihaqi Studio", "url": "https://fighterloo.github.io/"}
 }
@@ -44,10 +52,11 @@
     <a class="brand" href="#top"><img src="img/icon-192.png" alt="" width="32" height="32">NEXT TOWER</a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#hero">Heroes</a>
-      <a href="#arena">Arena</a>
-      <a href="#kota">Town</a>
+      <a href="#commander">Commanders</a>
       <a href="#plane">Planes</a>
-      <a href="#video">Video</a>
+      <a href="#modes">Modes</a>
+      <a href="#kota">Town</a>
+      <a href="#video">Trailer</a>
       <a href="#harga">Price</a>
     </nav>
   </div>
@@ -63,12 +72,14 @@
       <div class="gems" aria-hidden="true">
         <img src="img/el/fire.svg" alt="" width="34" height="34"><img src="img/el/water.svg" alt="" width="34" height="34"><img src="img/el/lightning.svg" alt="" width="34" height="34"><img src="img/el/ice.svg" alt="" width="34" height="34"><img src="img/el/nature.svg" alt="" width="34" height="34"><img src="img/el/stone.svg" alt="" width="34" height="34">
       </div>
-      <h1 class="title"><span class="name">NEXT TOWER</span><span class="sr"> — </span><span class="sub">Elemental Resonance Defense</span></h1>
-      <p class="pitch">Mix elements. Set off reactions.</p>
+      <h1 class="title"><span class="name">NEXT TOWER</span><span class="sr"> — </span><span class="sub">6-Element Tower Defense</span></h1>
+      <p class="pitch">Guard the crystal. Mix elements. Set off reactions.</p>
       <ul class="chips">
         <li><b>6</b> heroes</li>
         <li><b>15</b> reactions</li>
-        <li><b>3</b> planes</li>
+        <li><b>5</b> commanders</li>
+        <li><b>5</b> planes</li>
+        <li><b>35</b> days</li>
       </ul>
       <div class="cta">
         <span class="btn btn-gold soon-btn" role="img" aria-label="Coming soon to Google Play">
@@ -78,7 +89,7 @@
         <a class="btn" href="#harga">Plane 1 free</a>
       </div>
     </div>
-    <div class="shot"><img src="img/reaction.webp" alt="Six heroes and a lightning burst on the forest road" width="1280" height="720" fetchpriority="high"></div>
+    <div class="shot"><img src="img/top-boss.webp" alt="Fire and water heroes burn down a boss on the meadow road" width="1280" height="720" fetchpriority="high"></div>
   </div>
 </div>
 
@@ -95,6 +106,22 @@
       <li class="hero-card panel" style="--c:var(--nature)"><img class="por" src="img/heroes/liora.png" alt="" width="136" height="136"><h3>LIORA</h3><p>Grove Sister</p><span class="el"><img src="img/el/nature.svg" alt="" width="20" height="20">Nature</span></li>
       <li class="hero-card panel" style="--c:var(--stone)"><img class="por" src="img/heroes/bram.png" alt="" width="136" height="136"><h3>BRAM</h3><p>Stone Shield</p><span class="el"><img src="img/el/stone.svg" alt="" width="20" height="20">Stone</span></li>
     </ul>
+    <div class="feat flip rank">
+      <div class="shot"><img src="img/hero-hall.webp" alt="The Hero Hall: each hero's level and rank path" width="1280" height="720" loading="lazy"></div>
+      <div class="feat-body panel">
+        <h3>Rank up</h3>
+        <ol class="ranks" aria-hidden="true"><li><b>R1</b></li><li><b>R2</b></li><li><b>R3</b></li><li><b>R4</b></li></ol>
+        <ul class="ticks">
+          <li>Pick a skill</li>
+          <li>Pick a job</li>
+          <li>Unlock its ultimate</li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><b>24</b><span>jobs</span></div>
+          <div class="stat"><b>Lv 20</b><span>max</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -103,18 +130,18 @@
   <div class="wrap">
     <div class="sec-head"><h2 id="h-react">Reactions + Ultimates</h2></div>
     <div class="feat">
-      <div class="shot"><img src="img/snow-battle.webp" alt="Element reactions in a snow battle" width="1280" height="720" loading="lazy"></div>
+      <div class="shot"><img src="img/reaction-steam.webp" alt="Fire meets water: a Scalding Steam reaction on the road" width="1280" height="720" loading="lazy"></div>
       <div class="feat-body panel">
         <h3>Mix elements</h3>
         <ul class="recipes">
           <li><img src="img/el/fire.svg" alt="Fire" width="22" height="22"><i>+</i><img src="img/el/water.svg" alt="Water" width="22" height="22"><b>Scalding Steam</b></li>
+          <li><img src="img/el/water.svg" alt="Water" width="22" height="22"><i>+</i><img src="img/el/lightning.svg" alt="Lightning" width="22" height="22"><b>Conduction</b></li>
           <li><img src="img/el/water.svg" alt="Water" width="22" height="22"><i>+</i><img src="img/el/ice.svg" alt="Ice" width="22" height="22"><b>Frost Wall</b></li>
-          <li><img src="img/el/lightning.svg" alt="Lightning" width="22" height="22"><i>+</i><img src="img/el/ice.svg" alt="Ice" width="22" height="22"><b>Cryo Current</b></li>
-          <li><img src="img/el/lightning.svg" alt="Lightning" width="22" height="22"><i>+</i><img src="img/el/nature.svg" alt="Nature" width="22" height="22"><b>Volt Spores</b></li>
+          <li><img src="img/el/lightning.svg" alt="Lightning" width="22" height="22"><i>+</i><img src="img/el/stone.svg" alt="Stone" width="22" height="22"><b>Magnetic Core</b></li>
         </ul>
         <div class="stats">
-          <div class="stat"><b>15</b>reactions</div>
-          <div class="stat"><b>10</b><span>finisher</span></div>
+          <div class="stat"><b>15</b><span>reactions</span></div>
+          <div class="stat"><b>13</b><span>finishers</span></div>
         </div>
       </div>
     </div>
@@ -124,6 +151,7 @@
         <ul class="ticks">
           <li>One per job</li>
           <li>Duo: two heroes at once</li>
+          <li>Japanese voices</li>
         </ul>
       </div>
       <div class="shot"><img src="img/ultimate.webp" alt="Two ultimates going off at once" width="1600" height="900" loading="lazy"></div>
@@ -134,18 +162,102 @@
 <!-- Commanders -->
 <section id="commander" aria-labelledby="h-cmd">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-cmd">Commander</h2></div>
+    <div class="sec-head"><h2 id="h-cmd">5 Commanders</h2></div>
+    <p class="lead">Step in yourself.</p>
     <div class="feat">
-      <div class="shot"><img src="img/commander.webp" alt="Rara drops turrets beside the heroes" width="1280" height="720" loading="lazy"></div>
+      <div class="duo">
+        <div class="shot"><img src="img/cmd-sniper.webp" alt="Hawk's sniper scope over the battle" width="1280" height="720" loading="lazy"></div>
+        <div class="shot"><img src="img/cmd-kage.webp" alt="Kage's slash" width="1280" height="720" loading="lazy"></div>
+        <div class="shot wide"><img src="img/commander.webp" alt="Rara drops turrets beside the heroes" width="1280" height="720" loading="lazy"></div>
+      </div>
       <div class="feat-body panel">
-        <h3>Step in yourself</h3>
         <ul class="cmds">
-          <li><img class="px" src="img/cmd/elang.png" alt="" width="40" height="40"><span><b>HAWK</b><small>Sniper</small></span><span class="tag free">FREE</span></li>
-          <li><img class="px" src="img/cmd/kage.png" alt="" width="40" height="40"><span><b>KAGE</b><small>Ninja</small></span><span></span></li>
-          <li><img class="px" src="img/cmd/rara.png" alt="" width="40" height="40"><span><b>RARA</b><small>Mechanic</small></span><span></span></li>
-          <li class="soon"><span class="q" aria-hidden="true">?</span><span><b>???</b><small>Coming soon</small></span><span class="tag soon">SOON</span></li>
-          <li class="soon"><span class="q" aria-hidden="true">?</span><span><b>???</b><small>Coming soon</small></span><span class="tag soon">SOON</span></li>
+          <li><img class="px" src="img/cmd/elang.png" alt="" width="40" height="40"><span><b>HAWK</b><small>Sniper · aim yourself</small></span><span class="tag free">FREE</span></li>
+          <li><img class="px" src="img/cmd/kage.png" alt="" width="40" height="40"><span><b>KAGE</b><small>Ninja · slash</small></span><span></span></li>
+          <li><img class="px" src="img/cmd/rara.png" alt="" width="40" height="40"><span><b>RARA</b><small>Mechanic · turrets</small></span><span></span></li>
+          <li><img class="px" src="img/cmd/gara.png" alt="" width="40" height="40"><span><b>GARA</b><small>Guard Captain · shields</small></span><span></span></li>
+          <li><img class="px" src="img/cmd/marina.png" alt="" width="40" height="40"><span><b>MARINA</b><small>Mermaid · bubbles</small></span><span></span></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Planes -->
+<section id="plane" aria-labelledby="h-plane">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-plane">5 Planes</h2></div>
+    <p class="lead">Morning · evening · night. A boss waits at the end.</p>
+    <ul class="planes">
+      <li class="plane panel">
+        <div class="plane-art"><img src="img/plane1.webp" alt="" width="800" height="450" loading="lazy"><span class="tag free">FREE</span></div>
+        <div class="plane-body"><span class="n">PLANE 1</span><h3>Meadow</h3><div class="days"><span>5 days</span></div></div>
+      </li>
+      <li class="plane panel">
+        <div class="plane-art"><img src="img/plane2.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
+        <div class="plane-body"><span class="n">PLANE 2</span><h3>Desert</h3><div class="days"><span>7 days</span><span>Heat</span></div></div>
+      </li>
+      <li class="plane panel">
+        <div class="plane-art"><img src="img/plane3.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
+        <div class="plane-body"><span class="n">PLANE 3</span><h3>Snow</h3><div class="days"><span>7 days</span><span>Blizzard</span></div></div>
+      </li>
+      <li class="plane panel">
+        <div class="plane-art"><img src="img/plane4.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
+        <div class="plane-body"><span class="n">PLANE 4</span><h3>Sea</h3><div class="days"><span>8 days</span><span>Tide</span><span>Pirates</span></div></div>
+      </li>
+      <li class="plane panel">
+        <div class="plane-art"><img src="img/plane5.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
+        <div class="plane-body"><span class="n">PLANE 5</span><h3>The Rift</h3><div class="days"><span>8 days</span><span>Vael's Eye</span></div></div>
+      </li>
+    </ul>
+    <div class="feat flip map">
+      <div class="shot"><img src="img/plane-map.webp" alt="The Rift's map: floating islands, bosses on their peaks" width="1280" height="720" loading="lazy"></div>
+      <div class="feat-body panel">
+        <h3>Every day</h3>
+        <ol class="times" aria-label="One day">
+          <li class="t-am">Morning</li>
+          <li class="t-pm">Evening</li>
+          <li class="t-nt">Night</li>
+        </ol>
+        <div class="stats">
+          <div class="stat"><b>35</b><span>days</span></div>
+          <div class="stat"><b>105</b><span>stages</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modes -->
+<section id="modes" aria-labelledby="h-modes">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-modes">More Modes</h2></div>
+    <div class="modes">
+      <div class="mode tower panel">
+        <svg viewBox="0 0 20 28" shape-rendering="crispEdges" aria-hidden="true"><path fill="#5a4a32" d="M9 0h1v6H9z"/><path fill="#a868ff" d="M10 0h4v3h-4z"/><path fill="#d2b0ff" d="M10 0h3v1h-3z"/><path fill="#e3b458" d="M8 5h4v1h1v1h1v1h1v1H5V8h1V7h1V6h1z"/><path fill="#fff0b8" d="M8 5h2v1H8zM7 6h2v1H7zM6 7h2v1H6zM5 8h2v1H5z"/><path fill="#9a6a24" d="M12 6h1v1h1v1h1v1h-2V8h-1z"/><path fill="#8a5a1c" d="M4 9h12v2H4z"/><path fill="#f2c75c" d="M4 9h12v1H4z"/><path fill="#4a3d6b" d="M5 11h10v14H5z"/><path fill="#6a5a94" d="M5 11h2v14H5z"/><path fill="#352a52" d="M13 11h2v14h-2z"/><path fill="#2a2142" d="M5 15h10v1H5zM5 19h10v1H5zM9 11h1v4H9zM7 16h1v3H7zM11 16h1v3h-1z"/><path fill="#ffd84a" d="M10 12h2v2h-2zM8 17h2v1H8z"/><path fill="#fff3a8" d="M10 12h1v1h-1z"/><path fill="#2a1804" d="M9 21h2v1h1v3H8v-3h1z"/><path fill="#8a5a1c" d="M3 25h14v2H3z"/><path fill="#c79a6a" d="M3 25h14v1H3z"/></svg>
+        <div>
+          <h3>Rift Tower</h3>
+          <p class="big"><b>30</b> floors</p>
+          <ul class="ticks"><li>Pick 1 power card</li><li>Climb to the summit</li></ul>
+        </div>
+      </div>
+      <div class="mode panel">
+        <svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M1 1h10v10H1z"/><path fill="#a868ff" d="M2 2h4v4H2z"/><path fill="#f2c75c" d="M6 2h4v4H6z"/><path fill="#5fd46a" d="M2 6h4v4H2z"/><path fill="#3d8bff" d="M6 6h4v4H6z"/><path fill="#fff0b8" d="M2 2h2v1H2zM6 2h2v1H6zM2 6h2v1H2zM6 6h2v1H6z"/></svg>
+        <div>
+          <h3>Puzzles</h3>
+          <p class="big"><b>30</b> boards</p>
+          <ul class="ticks"><li>A new puzzle daily</li><li>1-3 stars</li></ul>
+        </div>
+      </div>
+      <div class="mode panel">
+        <svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M1 3h10v7H1z"/><path fill="#4a3d6b" d="M2 4h8v5H2z"/><path fill="#f2c75c" d="M3 5h1v3H3zM2 6h3v1H2z"/><path fill="#ff7a2e" d="M8 5h1v1H8z"/><path fill="#5fd46a" d="M7 7h1v1H7z"/><path fill="#3d8bff" d="M9 7h1v1H9z"/><path fill="#a868ff" d="M5 1h2v2H5z"/></svg>
+        <div>
+          <h3>Minigames</h3>
+          <p class="big"><b>10</b> games</p>
+          <ul class="mini">
+            <li>Sniper Gallery</li><li>Kage's Cut</li><li>Crystal Cart</li><li>Sky Full of Blasts</li><li>Boss Parade</li><li>Element Rhythm</li><li>Upside Down</li><li>+3</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -156,7 +268,10 @@
   <div class="wrap">
     <div class="sec-head"><h2 id="h-town">Build Your Town</h2></div>
     <p class="lead">Power up between battles.</p>
-    <div class="shot"><img src="img/town.webp" alt="The town: Town Hall, Hero Hall, Forge, Shop and Library" width="1600" height="900" loading="lazy"></div>
+    <div class="shot"><img src="img/town.webp" alt="The town: Town Hall, Hero Hall, Forge, Academy, Shop, Library, Command Post and Puzzle Pavilion" width="1600" height="900" loading="lazy"></div>
+    <ul class="blds">
+      <li>Town Hall</li><li>Hero Hall</li><li>Forge</li><li>Academy</li><li>Shop</li><li>Command Post</li><li>Library</li><li>Bounty Board</li><li>Puzzle Pavilion</li>
+    </ul>
   </div>
 </section>
 
@@ -165,68 +280,24 @@
   <div class="wrap">
     <div class="sec-head"><h2 id="h-arena">In the Arena</h2></div>
     <ul class="gallery">
-      <li><figure><div class="shot"><img src="img/arena-forest-day.webp" alt="Six heroes holding the forest road" width="1280" height="720" loading="lazy"></div><figcaption>Forest <span>day</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/arena-forest-night.webp" alt="A boss arrives in the forest at night" width="1280" height="720" loading="lazy"></div><figcaption>Forest <span>night · boss</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/arena-desert-day.webp" alt="The Kraken's Maw ultimate on the desert road" width="1280" height="720" loading="lazy"></div><figcaption>Desert <span>day</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-forest-day.webp" alt="Six heroes holding the meadow road" width="1280" height="720" loading="lazy"></div><figcaption>Meadow <span>morning</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-forest-night.webp" alt="A boss arrives on the meadow at night" width="1280" height="720" loading="lazy"></div><figcaption>Meadow <span>night · boss</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-desert-day.webp" alt="The Kraken's Maw ultimate on the desert road" width="1280" height="720" loading="lazy"></div><figcaption>Desert <span>morning</span></figcaption></figure></li>
       <li><figure><div class="shot"><img src="img/arena-desert-evening.webp" alt="Ultimates in a desert evening" width="1280" height="720" loading="lazy"></div><figcaption>Desert <span>evening</span></figcaption></figure></li>
-      <li><figure><div class="shot"><img src="img/arena-snow-day.webp" alt="A boss fight in the snow" width="1280" height="720" loading="lazy"></div><figcaption>Snow <span>day · boss</span></figcaption></figure></li>
+      <li><figure><div class="shot"><img src="img/arena-snow-day.webp" alt="A boss fight in the snow" width="1280" height="720" loading="lazy"></div><figcaption>Snow <span>morning · boss</span></figcaption></figure></li>
       <li><figure><div class="shot"><img src="img/arena-snow-evening.webp" alt="An evening battle in the snow" width="1280" height="720" loading="lazy"></div><figcaption>Snow <span>evening</span></figcaption></figure></li>
     </ul>
   </div>
 </section>
 
-<!-- Planes -->
-<section id="plane" aria-labelledby="h-plane">
-  <div class="wrap">
-    <div class="sec-head"><h2 id="h-plane">Planes</h2></div>
-    <p class="lead">Day · evening · night, then a boss.</p>
-    <ul class="planes">
-      <li class="plane panel">
-        <div class="plane-art"><img src="img/plane1.webp" alt="" width="800" height="450" loading="lazy"><span class="tag free">FREE</span></div>
-        <div class="plane-body"><span class="n">PLANE 1</span><h3>Forest</h3><div class="days"><span>5 Days</span><span>Out now</span></div></div>
-      </li>
-      <li class="plane panel">
-        <div class="plane-art"><img src="img/plane2.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
-        <div class="plane-body"><span class="n">PLANE 2</span><h3>Desert</h3><div class="days"><span>7 Days</span><span>Out now</span></div></div>
-      </li>
-      <li class="plane panel">
-        <div class="plane-art"><img src="img/plane3.webp" alt="" width="800" height="450" loading="lazy"><span class="tag">PREMIUM</span></div>
-        <div class="plane-body"><span class="n">PLANE 3</span><h3>Snow</h3><div class="days"><span>7 Days</span><span>Out now</span></div></div>
-      </li>
-      <li class="plane panel locked">
-        <div class="plane-art"><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M3 1h6v1h1v4h1v6H1V6h1V2h1zm1 2v3h4V3z"/><path fill="#b9a888" d="M4 2h4v1H4zM3 3h1v3H3zm5 0h1v3H8zM2 7h8v4H2z"/><path fill="#f2c75c" d="M2 7h8v1H2z"/><path fill="#1a1006" d="M5 8h2v2H5z"/></svg><span class="tag soon">SOON</span></div>
-        <div class="plane-body"><span class="n">PLANE 4</span><h3>???</h3><p>Coming soon</p></div>
-      </li>
-      <li class="plane panel locked">
-        <div class="plane-art"><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#1a1006" d="M3 1h6v1h1v4h1v6H1V6h1V2h1zm1 2v3h4V3z"/><path fill="#b9a888" d="M4 2h4v1H4zM3 3h1v3H3zm5 0h1v3H8zM2 7h8v4H2z"/><path fill="#f2c75c" d="M2 7h8v1H2z"/><path fill="#1a1006" d="M5 8h2v2H5z"/></svg><span class="tag soon">SOON</span></div>
-        <div class="plane-body"><span class="n">PLANE 5</span><h3>???</h3><p>Coming soon</p></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- Tower mode -->
-<section id="menara" aria-labelledby="h-tower">
-  <div class="wrap">
-    <div class="sec-head"><h2 id="h-tower">Tower Mode</h2></div>
-    <div class="tower panel">
-      <svg viewBox="0 0 20 28" shape-rendering="crispEdges" aria-hidden="true"><path fill="#5a4a32" d="M9 0h1v6H9z"/><path fill="#a868ff" d="M10 0h4v3h-4z"/><path fill="#d2b0ff" d="M10 0h3v1h-3z"/><path fill="#e3b458" d="M8 5h4v1h1v1h1v1h1v1H5V8h1V7h1V6h1z"/><path fill="#fff0b8" d="M8 5h2v1H8zM7 6h2v1H7zM6 7h2v1H6zM5 8h2v1H5z"/><path fill="#9a6a24" d="M12 6h1v1h1v1h1v1h-2V8h-1z"/><path fill="#8a5a1c" d="M4 9h12v2H4z"/><path fill="#f2c75c" d="M4 9h12v1H4z"/><path fill="#4a3d6b" d="M5 11h10v14H5z"/><path fill="#6a5a94" d="M5 11h2v14H5z"/><path fill="#352a52" d="M13 11h2v14h-2z"/><path fill="#2a2142" d="M5 15h10v1H5zM5 19h10v1H5zM9 11h1v4H9zM7 16h1v3H7zM11 16h1v3h-1z"/><path fill="#ffd84a" d="M10 12h2v2h-2zM8 17h2v1H8z"/><path fill="#fff3a8" d="M10 12h1v1h-1z"/><path fill="#2a1804" d="M9 21h2v1h1v3H8v-3h1z"/><path fill="#8a5a1c" d="M3 25h14v2H3z"/><path fill="#c79a6a" d="M3 25h14v1H3z"/></svg>
-      <div>
-        <span class="tag soon">COMING SOON</span>
-        <h3>Climb the tower</h3>
-        <div class="floors" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>?</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Videos -->
+<!-- Trailer. When the YouTube video is up, put its id (the part after v= in the link) in data-yt,
+     e.g. data-yt="dQw4w9WgXcQ": the poster turns into a play button that loads the video. -->
 <section id="video" aria-labelledby="h-video">
   <div class="wrap">
-    <div class="sec-head"><h2 id="h-video">Video</h2></div>
-    <div class="videos">
-      <div class="vid panel"><img src="img/forest-battle.webp" alt="" width="1280" height="720" loading="lazy"><div class="in"><span class="pl" aria-hidden="true"></span><h3>Trailer</h3><span class="tag soon">COMING SOON</span></div></div>
-      <div class="vid panel"><img src="img/night.webp" alt="" width="1280" height="720" loading="lazy"><div class="in"><span class="pl" aria-hidden="true"></span><h3>Gameplay</h3><span class="tag soon">COMING SOON</span></div></div>
+    <div class="sec-head"><h2 id="h-video">Trailer</h2></div>
+    <div class="vid panel" id="trailer" data-yt="">
+      <img src="img/arena-desert-evening.webp" alt="" width="1280" height="720" loading="lazy">
+      <div class="in"><span class="pl" aria-hidden="true"></span><h3>Trailer</h3><span class="tag soon">COMING SOON</span></div>
     </div>
   </div>
 </section>
@@ -240,23 +311,30 @@
         <h3><span class="tag free">FREE</span>Try it</h3>
         <p class="amt">Rp 0<small>All of Plane 1</small></p>
         <ul class="ticks">
-          <li>Plane 1 (Forest)</li>
+          <li>Plane 1 · 5 days</li>
           <li>6 heroes</li>
+          <li>Town at level 1</li>
           <li>Hawk the commander</li>
-          <li class="no">Town closed</li>
         </ul>
       </div>
       <div class="tier panel best">
         <h3><span class="tag">PREMIUM</span>Unlock all</h3>
         <p class="amt">Rp 35.000<small>US$3 · one-time</small></p>
         <ul class="ticks">
-          <li>Every plane</li>
-          <li>The town</li>
-          <li>3 commanders</li>
-          <li>No DLC</li>
+          <li>Planes 2-5</li>
+          <li>Every building level</li>
+          <li>All 5 commanders</li>
+          <li>Pay once, keep it</li>
         </ul>
       </div>
     </div>
+    <ul class="perks">
+      <li><b>0</b>ads</li>
+      <li><b>0</b>DLC</li>
+      <li><b>0</b>gacha</li>
+      <li><svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#9fe8ff" d="M4 3h3v1h1v1h2v1h1v3H1V6h1V5h1V4h1z"/><path fill="#fff" d="M4 4h2v1H4zM3 5h1v1H3z"/><path fill="#3d8bff" d="M1 8h10v1H1z"/></svg>Cloud save<small>Google Play Games</small></li>
+      <li><b>EN</b>ID · JA</li>
+    </ul>
     <div class="store">
       <span class="btn btn-gold soon-btn" role="img" aria-label="Coming soon to Google Play">
         <svg class="play-ico" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"><path fill="#2a1804" d="M2 1h2v1h2v1h2v1h2v1h1v2h-1v1H8v1H6v1H4v1H2z"/><path fill="#fff6d8" d="M3 3h1v1h2v1h2v2H6v1H4v1H3z"/></svg>
@@ -279,6 +357,27 @@
     <p class="fine">© 2026 Baihaqi Studio · Font: Silkscreen (<a href="fonts/OFL.txt">OFL</a>)</p>
   </div>
 </footer>
+
+<script>
+/* Trailer: a YouTube id in #trailer's data-yt turns the poster into a click-to-play embed */
+(function () {
+  var box = document.getElementById('trailer'), id = box && box.getAttribute('data-yt');
+  if (!id) return;
+  box.classList.add('ready');
+  box.querySelector('.tag').remove();
+  var btn = document.createElement('button');
+  btn.className = 'vid-play'; btn.type = 'button'; btn.setAttribute('aria-label', 'Play the trailer');
+  box.appendChild(btn);
+  btn.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+    f.title = 'Next Tower trailer';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    box.innerHTML = ''; box.appendChild(f);
+  });
+})();
+</script>
 
 </body>
 </html>

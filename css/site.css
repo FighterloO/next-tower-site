@@ -206,3 +206,47 @@ section{padding:clamp(40px,7vw,80px) 0 0}
 .lost .panel{padding:28px;max-width:420px}
 .lost h1{font:700 40px var(--px);color:var(--gold-hi);text-shadow:0 3px 0 var(--edge)}
 .lost p{color:var(--dim);margin:12px 0 20px}
+
+/* --- 13 Nov 2026: content for the release (5 planes, 5 commanders, modes, trailer slot) --- */
+.rank{margin-top:28px}
+.ranks{list-style:none;padding:0;margin:0 0 14px;display:flex;gap:6px}
+.ranks li{flex:1;display:grid;place-items:center;height:34px;border-radius:4px;background:rgba(0,0,0,.35);border:2px solid var(--gold-lo)}
+.ranks b{font:700 13px var(--px);color:var(--gold-hi)}
+.ranks li:last-child{border-color:var(--gold);background:rgba(242,199,92,.14)}
+.times{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.times li{display:flex;align-items:center;gap:10px;font-size:13px;padding:6px 8px;background:rgba(0,0,0,.25);border-radius:4px}
+.times li::before{content:"";width:14px;height:14px;flex:none;border-radius:2px;box-shadow:0 0 0 2px var(--edge)}
+.times .t-am::before{background:#ffd84a}.times .t-pm::before{background:#ff8a4a}.times .t-nt::before{background:#5a4ab8}
+.map{margin-top:28px}
+/* Commanders: two shots side by side, the turret one under them */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo .wide{grid-column:1/-1}
+/* Modes */
+.modes{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){.modes{grid-template-columns:repeat(3,1fr)}}
+.mode{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:clamp(16px,2.6vw,22px)}
+.mode>svg{width:56px;height:auto;filter:drop-shadow(0 3px 0 var(--edge))}
+.mode.tower>svg{width:56px;margin:0}
+.mode h3{font:700 17px var(--px);color:var(--gold-hi);letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px}
+.mode .big{font-size:13px;color:var(--dim);margin-bottom:10px}
+.mode .big b{font:700 26px/1 var(--px);color:var(--ink);margin-right:4px}
+.mini,.blds{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.mini li,.blds li{font-size:11px;padding:3px 7px;border-radius:3px;background:rgba(0,0,0,.35);border:1px solid #3a2d5a;color:var(--ink)}
+.blds{margin-top:14px;justify-content:center}
+.blds li{font-size:12px;padding:4px 9px;border-color:var(--gold-lo)}
+/* Trailer slot: poster + "coming soon"; with data-yt it plays the YouTube video */
+#video .vid{max-width:900px;margin:0 auto}
+#video .vid>img{filter:brightness(.45) saturate(.85)}
+.vid.ready>img{filter:brightness(.8)}
+.vid.ready .pl{display:none}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer}
+.vid-play::before{content:"";position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:rgba(16,12,28,.85);box-shadow:0 0 0 3px var(--gold),0 0 0 6px var(--edge)}
+.vid-play::after{content:"";position:absolute;left:50%;top:50%;margin:-16px 0 0 -8px;border-left:28px solid var(--gold-hi);border-top:16px solid transparent;border-bottom:16px solid transparent}
+.vid-play:hover::before{background:rgba(58,40,22,.95)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* Price: the little perks row */
+.perks{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.perks li{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:13px;background:rgba(16,12,28,.85);border:2px solid var(--gold-lo);border-radius:5px;box-shadow:0 0 0 1px var(--edge)}
+.perks b{font:700 18px/1 var(--px);color:var(--gold-hi)}
+.perks svg{width:22px;height:22px}
+.perks small{font-size:10px;color:var(--dim)}

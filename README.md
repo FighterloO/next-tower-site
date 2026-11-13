@@ -4,22 +4,32 @@ The site of Next Tower (Baihaqi Studio) at https://fighterloo.github.io/next-tow
 Static: no build step. GitHub Pages serves `main` from the root. The studio site (FighterloO/fighterloo.github.io) links here.
 
 ```
-index.html     the one page, in English (user, 5 Nov 2026)
-privacy.html   Privacy Policy, in English (Google Play needs it): offline, no personal data, save on device, Google Play Billing
-404.html       not found (noindex)
-css/site.css   the game's HUD look: navy-purple panels in a gold bevel (App.svelte --hud-* tokens), Silkscreen
-fonts/         Silkscreen Regular + Bold (OFL.txt), from the game (game/public/assets/fonts)
-img/           screenshots captured from the running game in English (dev build, ?lang=en, 1920x1080, headless Chrome), as WebP
-img/el/        the six pixel element icons (the game's ElementIcon.svelte, exported as SVG)
-img/heroes/    hero portraits: first idle frame of each rank-4 job sprite (game/public/assets/sprites)
-img/cmd/       commander faces (from the Markas Commander panel)
-img/share.jpg  1200x630 share image
+index.html       the one page, in English (user, 5 Nov 2026); content matches the Play Store listing (13 Nov 2026):
+                 6 heroes, 15 reactions, 5 commanders, 5 planes / 35 days, Rift Tower, puzzles, 10 minigames, town, price
+privacy.html     Privacy Policy (Google Play needs it): no personal data, save on device, optional cloud save (Play Games)
+404.html         not found (noindex)
+sitemap.xml      index + privacy, with lastmod: submit it in Search Console for the next-tower-site property
+robots.txt       points to the sitemap (crawlers only read the host root's robots.txt, the studio site's, which lists it too)
+site.webmanifest name, colours, icons
+favicon.ico, favicon-48x48/96x96/192x192.png, apple-touch-icon.png, icon-512.png
+                 the store icon (next-tower-preview/icon/next-tower-icon-512.png, design B)
+css/site.css     the game's HUD look: navy-purple panels in a gold bevel (App.svelte --hud-* tokens), Silkscreen
+fonts/           Silkscreen Regular + Bold (OFL.txt), from the game (game/public/assets/fonts)
+img/             WebP: store screenshots without the caption band (next-tower-preview/screenshots/raw): top-boss,
+                 reaction-steam, cmd-sniper, cmd-kage, town, hero-hall, plane-map; plane4/plane5 (empty arena captures);
+                 the rest captured from the game in English on 5 Nov 2026 (arena-*, plane1-3, ultimate, commander)
+img/el/          the six pixel element icons (the game's ElementIcon.svelte, exported as SVG)
+img/heroes/      hero portraits: first idle frame of each rank-4 job sprite
+img/cmd/         commander faces (the game's 24 px cmd_*.png icons x4.5 on the panel colour)
+img/share.jpg    1200x630 share image (the English feature graphic)
 ```
 
-Preview locally: `python -m http.server 8770`, then open http://localhost:8770/.
-After changing `css/site.css`, bump the `?v=` number where it is linked.
+Preview locally: serve the folder above this one (`python -m http.server 8770` in `D:\next game`), then open
+http://localhost:8770/next-tower-site/ (the 404 page uses /next-tower-site/ paths).
+After changing `css/site.css`, bump the `?v=` number where it is linked (index, privacy, 404).
+After changing a page, update its `<lastmod>` in `sitemap.xml`.
 
 When things go live:
-- Google Play: replace the two "Segera di Google Play" badges in `index.html` with a link to the store page.
-- Trailer / gameplay: replace the two `.vid` placeholders in `#video` with the videos.
-- Plane 4, Plane 5, Tower mode: swap the locked cards for screenshots.
+- Trailer: put the YouTube video id in `data-yt=""` on `#trailer` in `index.html` (the part after `v=`); the poster
+  becomes a play button that loads the video (youtube-nocookie).
+- Google Play: replace the two "Coming soon to Google Play" badges in `index.html` with a link to the store page.

@@ -1,0 +1,6 @@
+# Crawlers read robots.txt only at the host root (https://fighterloo.github.io/robots.txt, the studio site,
+# which lists this sitemap too). This copy is for completeness.
+User-agent: *
+Allow: /
+
+Sitemap: https://fighterloo.github.io/next-tower-site/sitemap.xml
