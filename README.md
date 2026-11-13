@@ -12,7 +12,8 @@ sitemap.xml      index + privacy, with lastmod: submit it in Search Console for 
 robots.txt       points to the sitemap (crawlers only read the host root's robots.txt, the studio site's, which lists it too)
 site.webmanifest name, colours, icons
 favicon.ico, favicon-48x48/96x96/192x192.png, apple-touch-icon.png, icon-512.png
-                 the store icon (next-tower-preview/icon/next-tower-icon-512.png, design B)
+                 the Next Tower logo: the crystal on its rock (next-tower-preview/icon/web/next-tower-logo-*.png,
+                 user, 13 Nov 2026); img/icon-192.png (nav + footer) is the same. Never the store "design B" icon
 css/site.css     the game's HUD look: navy-purple panels in a gold bevel (App.svelte --hud-* tokens), Silkscreen
 fonts/           Silkscreen Regular + Bold (OFL.txt), from the game (game/public/assets/fonts)
 img/             WebP: store screenshots without the caption band (next-tower-preview/screenshots/raw): top-boss,
