@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611141">
+<link rel="stylesheet" href="css/site.css?v=202611142">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -355,11 +355,43 @@
       <a href="terms.html">Terms of Service</a>
       <a href="mailto:supeersaiyan15@gmail.com">supeersaiyan15@gmail.com</a>
     </p>
-    <p class="fine">© 2026 Baihaqi Studio · Font: Silkscreen (<a href="fonts/OFL.txt">OFL</a>)</p>
+    <p class="fine">© 2026 Baihaqi Studio · Font: Silkscreen (<a href="fonts/OFL.txt">OFL</a>) · Music: "Calm Lullaby For Irish Harp" by MountainDweller (<a href="https://pixabay.com/music/243170/" target="_blank" rel="noopener">Pixabay</a>)</p>
   </div>
 </footer>
 
+<!-- Music: the game's menu theme, off until the visitor presses the button -->
+<button type="button" class="music" id="music" aria-pressed="false" aria-label="Play the menu music">
+  <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="music-label">Music</span>
+</button>
+<audio id="music-track" src="media/menu.mp3" preload="none" loop></audio>
+
 <script>
+/* Music: the game's menu theme, faded in and out; a trailer starting or the tab hiding pauses it */
+(function () {
+  var btn = document.getElementById('music'), a = document.getElementById('music-track');
+  if (!btn || !a) return;
+  var VOL = 0.4, fade = null, on = false;
+  function ramp(to, done) {
+    clearInterval(fade);
+    fade = setInterval(function () {
+      var up = to > a.volume, v = a.volume + (up ? 0.03 : -0.05);
+      if ((up && v >= to) || (!up && v <= to)) { a.volume = to; clearInterval(fade); if (done) done(); }
+      else a.volume = Math.max(0, Math.min(1, v));
+    }, 50);
+  }
+  function set(play) {
+    on = play;
+    btn.setAttribute('aria-pressed', play);
+    btn.setAttribute('aria-label', play ? 'Stop the menu music' : 'Play the menu music');
+    if (play) { a.volume = 0; a.play().then(function () { ramp(VOL); }).catch(function () { set(false); }); }
+    else ramp(0, function () { a.pause(); });
+  }
+  btn.addEventListener('click', function () { set(!on); });
+  document.addEventListener('click', function (e) { if (on && e.target.closest && e.target.closest('.vid-play')) set(false); });
+  document.addEventListener('visibilitychange', function () { if (!on) return; if (document.hidden) a.pause(); else a.play().catch(function () {}); });
+})();
+
+
 /* Trailer: a YouTube id in #trailer's data-yt turns the poster into a click-to-play embed */
 (function () {
   var box = document.getElementById('trailer'), id = box && box.getAttribute('data-yt');

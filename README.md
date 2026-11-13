@@ -23,6 +23,8 @@ img/el/          the six pixel element icons (the game's ElementIcon.svelte, exp
 img/heroes/      hero portraits: first idle frame of each rank-4 job sprite
 img/cmd/         commander faces (the game's 24 px cmd_*.png icons x4.5 on the panel colour)
 img/share.jpg    1200x630 share image (the English feature graphic)
+media/menu.mp3   the music button (bottom left): the game's menu theme (game/public/assets/music/menu.ogg, "Calm Lullaby For
+                 Irish Harp" by MountainDweller, Pixabay Content License), MP3 96 kbps; off until pressed, credited in the footer
 ```
 
 Preview locally: serve the folder above this one (`python -m http.server 8770` in `D:\next game`), then open

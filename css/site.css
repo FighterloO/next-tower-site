@@ -250,3 +250,19 @@ section{padding:clamp(40px,7vw,80px) 0 0}
 .perks b{font:700 18px/1 var(--px);color:var(--gold-hi)}
 .perks svg{width:22px;height:22px}
 .perks small{font-size:10px;color:var(--dim)}
+
+/* Music button: bottom left, the game's menu theme on/off */
+.music{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:30;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 14px 0 12px;
+  background:var(--panel) padding-box,var(--bezel) border-box;border:3px solid transparent;border-radius:6px;box-shadow:0 0 0 2px var(--edge),0 8px 20px rgba(0,0,0,.5);
+  color:var(--gold-hi);font:700 13px var(--px);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;touch-action:manipulation}
+.music:hover{filter:brightness(1.15)}
+.music .eq{display:flex;align-items:flex-end;gap:3px;height:16px}
+.music .eq i{display:block;width:4px;height:4px;background:var(--dim)}
+.music[aria-pressed=true] .eq i{background:var(--gold);animation:eq .9s steps(4) infinite}
+.music[aria-pressed=true] .eq i:nth-child(2){animation-delay:.25s}
+.music[aria-pressed=true] .eq i:nth-child(3){animation-delay:.5s}
+.music[aria-pressed=true] .eq i:nth-child(4){animation-delay:.15s}
+.music[aria-pressed=false] .eq i:nth-child(2),.music[aria-pressed=false] .eq i:nth-child(4){height:8px}
+@keyframes eq{0%,100%{height:4px}50%{height:16px}}
+@media (max-width:600px){.music .music-label{display:none}.music{padding:0 12px}}
+@media (prefers-reduced-motion:reduce){.music[aria-pressed=true] .eq i{animation:none;height:12px}}
