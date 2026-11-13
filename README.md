@@ -31,6 +31,6 @@ After changing `css/site.css`, bump the `?v=` number where it is linked (index, 
 After changing a page, update its `<lastmod>` in `sitemap.xml`.
 
 When things go live:
-- Trailer: put the YouTube video id in `data-yt=""` on `#trailer` in `index.html` (the part after `v=`); the poster
-  becomes a play button that loads the video (youtube-nocookie).
+- Trailer: `data-yt` on `#trailer` in `index.html` holds the YouTube id (now `kN2SQPyae_0`, https://youtu.be/kN2SQPyae_0);
+  the poster becomes a play button that loads the video (youtube-nocookie). Empty it to show COMING SOON.
 - Google Play: replace the two "Coming soon to Google Play" badges in `index.html` with a link to the store page.

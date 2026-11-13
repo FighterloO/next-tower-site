@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611131">
+<link rel="stylesheet" href="css/site.css?v=202611141">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -290,13 +290,13 @@
   </div>
 </section>
 
-<!-- Trailer. When the YouTube video is up, put its id (the part after v= in the link) in data-yt,
-     e.g. data-yt="dQw4w9WgXcQ": the poster turns into a play button that loads the video. -->
+<!-- Trailer: data-yt holds the YouTube id (https://youtu.be/kN2SQPyae_0, 14 Nov 2026); the poster gets a play button
+     that loads the video. Change the id to swap the video, empty it to show COMING SOON again. -->
 <section id="video" aria-labelledby="h-video">
   <div class="wrap">
     <div class="sec-head"><h2 id="h-video">Trailer</h2></div>
-    <div class="vid panel" id="trailer" data-yt="">
-      <img src="img/arena-desert-evening.webp" alt="" width="1280" height="720" loading="lazy">
+    <div class="vid panel" id="trailer" data-yt="kN2SQPyae_0">
+      <img src="img/trailer-poster.webp" alt="" width="1280" height="720" loading="lazy">
       <div class="in"><span class="pl" aria-hidden="true"></span><h3>Trailer</h3><span class="tag soon">COMING SOON</span></div>
     </div>
   </div>
