@@ -16,13 +16,22 @@ favicon.ico, favicon-48x48/96x96/192x192.png, apple-touch-icon.png, icon-512.png
                  user, 13 Nov 2026); img/icon-192.png (nav + footer) is the same. Never the store "design B" icon
 css/site.css     the game's HUD look: navy-purple panels in a gold bevel (App.svelte --hud-* tokens), Silkscreen
 fonts/           Silkscreen Regular + Bold (OFL.txt), from the game (game/public/assets/fonts)
-img/             WebP: store screenshots without the caption band (next-tower-preview/screenshots/raw): top-boss,
-                 reaction-steam, cmd-sniper, cmd-kage, town, hero-hall, plane-map; plane4/plane5 (empty arena captures);
+img/             WebP: store screenshots without the caption band (next-tower-preview/screenshots/raw):
+                 reaction-steam, cmd-sniper, cmd-kage, town, plane-map; plane4/plane5 (empty arena captures);
                  the rest captured from the game in English on 5 Nov 2026 (arena-*, plane1-3, ultimate, commander)
 img/el/          the six pixel element icons (the game's ElementIcon.svelte, exported as SVG)
 img/heroes/      hero portraits: first idle frame of each rank-4 job sprite
 img/cmd/         commander faces (the game's 24 px cmd_*.png icons x4.5 on the panel colour)
 img/share.jpg    1200x630 share image (the English feature graphic)
+media/combat-loop.mp4  the top: 15 s of combat cut from the English trailer (ultimates 30.25-41.75 s, Frost Wall 23.3-24.5 s,
+                 Plasma Burst 25.75-28.1 s), 960x540 H.264 CRF 27, muted; img/combat-poster.webp is its first frame.
+                 Plays only while on screen; reduced motion shows the poster
+img/ranks/       one sheet per hero: rows r1, r2, then its four jobs, six idle frames each (3/4 view, feet on one
+                 line), cut from game/public/assets_steep/sprites/hero_<id>_*.png and static.json
+js/hero-data.js  the heroes' skills, jobs, classes, ultimates and their two forms, in English, from game/src/lib/game/
+                 heroes.js and elements.js (ESKILL, JOB_LIST, ULTS, ULT_SHORT, ULT_ALTS, signature reactions)
+js/heroes.js     tap a hero card: #rankpath shows R1 deploy, R2 its two skills, R3 its four jobs (tap one), R4 that
+                 job's ultimate and its two forms; the big sprite follows the picked look
 media/menu.mp3   the music button (bottom left): the game's menu theme (game/public/assets/music/menu.ogg, "Calm Lullaby For
                  Irish Harp" by MountainDweller, Pixabay Content License), MP3 96 kbps; off until pressed, credited in the footer
 ```

@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611142">
+<link rel="stylesheet" href="css/site.css?v=202611144">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -89,7 +89,7 @@
         <a class="btn" href="#harga">Plane 1 free</a>
       </div>
     </div>
-    <div class="shot"><img src="img/top-boss.webp" alt="Fire and water heroes burn down a boss on the meadow road" width="1280" height="720" fetchpriority="high"></div>
+    <div class="shot top-vid"><video src="media/combat-loop.mp4" poster="img/combat-poster.webp" width="960" height="540" muted loop playsinline autoplay preload="auto" data-loop aria-label="Combat: Fire Tornado, Tide Blade, Storm Totem, Thorn Forest, Frost Thorns, Plasma Burst"></video></div>
   </div>
 </div>
 
@@ -97,30 +97,17 @@
 <section id="hero" aria-labelledby="h-hero">
   <div class="wrap">
     <div class="sec-head"><h2 id="h-hero">6 Heroes · 6 Elements</h2></div>
-    <p class="lead">One hero per element.</p>
+    <p class="lead">One hero per element. Tap one to see what it becomes.</p>
     <ul class="heroes">
-      <li class="hero-card panel" style="--c:var(--fire)"><img class="por" src="img/heroes/ryn.png" alt="" width="136" height="136"><h3>RYN</h3><p>Ember Scout</p><span class="el"><img src="img/el/fire.svg" alt="" width="20" height="20">Fire</span></li>
-      <li class="hero-card panel" style="--c:var(--water)"><img class="por" src="img/heroes/mira.png" alt="" width="136" height="136"><h3>MIRA</h3><p>Tide Keeper</p><span class="el"><img src="img/el/water.svg" alt="" width="20" height="20">Water</span></li>
-      <li class="hero-card panel" style="--c:var(--lightning)"><img class="por" src="img/heroes/kael.png" alt="" width="136" height="136"><h3>KAEL</h3><p>Storm Adept</p><span class="el"><img src="img/el/lightning.svg" alt="" width="20" height="20">Lightning</span></li>
-      <li class="hero-card panel" style="--c:var(--ice)"><img class="por" src="img/heroes/sora.png" alt="" width="136" height="136"><h3>SORA</h3><p>Frost Warden</p><span class="el"><img src="img/el/ice.svg" alt="" width="20" height="20">Ice</span></li>
-      <li class="hero-card panel" style="--c:var(--nature)"><img class="por" src="img/heroes/liora.png" alt="" width="136" height="136"><h3>LIORA</h3><p>Grove Sister</p><span class="el"><img src="img/el/nature.svg" alt="" width="20" height="20">Nature</span></li>
-      <li class="hero-card panel" style="--c:var(--stone)"><img class="por" src="img/heroes/bram.png" alt="" width="136" height="136"><h3>BRAM</h3><p>Stone Shield</p><span class="el"><img src="img/el/stone.svg" alt="" width="20" height="20">Stone</span></li>
+      <li class="hero-card panel" data-hero="ryn" style="--c:var(--fire)"><img class="por" src="img/heroes/ryn.png" alt="" width="136" height="136"><h3>RYN</h3><p>Ember Scout</p><span class="el"><img src="img/el/fire.svg" alt="" width="20" height="20">Fire</span></li>
+      <li class="hero-card panel" data-hero="mira" style="--c:var(--water)"><img class="por" src="img/heroes/mira.png" alt="" width="136" height="136"><h3>MIRA</h3><p>Tide Keeper</p><span class="el"><img src="img/el/water.svg" alt="" width="20" height="20">Water</span></li>
+      <li class="hero-card panel" data-hero="kael" style="--c:var(--lightning)"><img class="por" src="img/heroes/kael.png" alt="" width="136" height="136"><h3>KAEL</h3><p>Storm Adept</p><span class="el"><img src="img/el/lightning.svg" alt="" width="20" height="20">Lightning</span></li>
+      <li class="hero-card panel" data-hero="sora" style="--c:var(--ice)"><img class="por" src="img/heroes/sora.png" alt="" width="136" height="136"><h3>SORA</h3><p>Frost Warden</p><span class="el"><img src="img/el/ice.svg" alt="" width="20" height="20">Ice</span></li>
+      <li class="hero-card panel" data-hero="liora" style="--c:var(--nature)"><img class="por" src="img/heroes/liora.png" alt="" width="136" height="136"><h3>LIORA</h3><p>Grove Sister</p><span class="el"><img src="img/el/nature.svg" alt="" width="20" height="20">Nature</span></li>
+      <li class="hero-card panel" data-hero="bram" style="--c:var(--stone)"><img class="por" src="img/heroes/bram.png" alt="" width="136" height="136"><h3>BRAM</h3><p>Stone Shield</p><span class="el"><img src="img/el/stone.svg" alt="" width="20" height="20">Stone</span></li>
     </ul>
-    <div class="feat flip rank">
-      <div class="shot"><img src="img/hero-hall.webp" alt="The Hero Hall: each hero's level and rank path" width="1280" height="720" loading="lazy"></div>
-      <div class="feat-body panel">
-        <h3>Rank up</h3>
-        <ol class="ranks" aria-hidden="true"><li><b>R1</b></li><li><b>R2</b></li><li><b>R3</b></li><li><b>R4</b></li></ol>
-        <ul class="ticks">
-          <li>Pick a skill</li>
-          <li>Pick a job</li>
-          <li>Unlock its ultimate</li>
-        </ul>
-        <div class="stats">
-          <div class="stat"><b>24</b><span>jobs</span></div>
-          <div class="stat"><b>Lv 20</b><span>max</span></div>
-        </div>
-      </div>
+    <div class="rankpath panel" id="rankpath" aria-live="polite">
+      <noscript><p class="rp-nojs">R1 deploy · R2 pick a skill · R3 pick one of 4 jobs · R4 its ultimate, in one of 2 forms. 24 jobs, Lv 20 max.</p></noscript>
     </div>
   </div>
 </section>
@@ -172,12 +159,13 @@
       </div>
       <div class="feat-body panel">
         <ul class="cmds">
-          <li><img class="px" src="img/cmd/elang.png" alt="" width="40" height="40"><span><b>HAWK</b><small>Sniper · aim yourself</small></span><span class="tag free">FREE</span></li>
-          <li><img class="px" src="img/cmd/kage.png" alt="" width="40" height="40"><span><b>KAGE</b><small>Ninja · slash</small></span><span></span></li>
-          <li><img class="px" src="img/cmd/rara.png" alt="" width="40" height="40"><span><b>RARA</b><small>Mechanic · turrets</small></span><span></span></li>
-          <li><img class="px" src="img/cmd/gara.png" alt="" width="40" height="40"><span><b>GARA</b><small>Guard Captain · shields</small></span><span></span></li>
-          <li><img class="px" src="img/cmd/marina.png" alt="" width="40" height="40"><span><b>MARINA</b><small>Mermaid · bubbles</small></span><span></span></li>
+          <li><img class="px" src="img/cmd/elang.png" alt="" width="40" height="40"><span><b>HAWK</b><small>Sniper · aim yourself</small><q>One eye. Never misses.</q></span><span class="tag free">FREE</span></li>
+          <li><img class="px" src="img/cmd/kage.png" alt="" width="40" height="40"><span><b>KAGE</b><small>Ninja · slash</small><q>The Shades hunt leaders. For Vael.</q></span><span></span></li>
+          <li><img class="px" src="img/cmd/rara.png" alt="" width="40" height="40"><span><b>RARA</b><small>Mechanic · turrets</small><q>Ugly cage, nice turret!</q></span><span></span></li>
+          <li><img class="px" src="img/cmd/gara.png" alt="" width="40" height="40"><span><b>GARA</b><small>Guard Captain · shields</small><q>This time I’ll guard you. I promise.</q></span><span></span></li>
+          <li><img class="px" src="img/cmd/marina.png" alt="" width="40" height="40"><span><b>MARINA</b><small>Mermaid · bubbles</small><q>Can I… come with you?</q></span><span></span></li>
         </ul>
+        <p class="cmd-lore">Vael’s Shades cage every leader they find. Break the cages plane by plane, then call one commander into each battle.</p>
       </div>
     </div>
   </div>
@@ -366,6 +354,17 @@
 <audio id="music-track" src="media/menu.mp3" preload="none" loop></audio>
 
 <script>
+/* The combat loop at the top: plays only while on screen; still (its poster) for reduced motion */
+(function () {
+  var v = document.querySelector('video[data-loop]');
+  if (!v) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); return; }
+  if (!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) v.play().catch(function () {}); else v.pause(); });
+  }, { threshold: 0.1 }).observe(v);
+})();
+
 /* Music: the game's menu theme, faded in and out; a trailer starting or the tab hiding pauses it */
 (function () {
   var btn = document.getElementById('music'), a = document.getElementById('music-track');
@@ -412,5 +411,7 @@
 })();
 </script>
 
+<script src="js/hero-data.js?v=202611144" defer></script>
+<script src="js/heroes.js?v=202611144" defer></script>
 </body>
 </html>
