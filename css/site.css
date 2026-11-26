@@ -333,3 +333,48 @@ section{padding:clamp(40px,7vw,80px) 0 0}
   .rp-step.rp-jobs .rp-txt,.rp-step.rp-ult .rp-txt{grid-column:1/-1}
   .rp-figure{height:170px}
 }
+
+/* ---------------------------------------------------------------- the pixel-art pass (26 Nov 2026)
+   (user: "pastikan tema nya bener2 pixel art dan ada animasi"): every frame a stepped pixel bevel at 2x
+   (img/ui/frame.svg, a 10x10 9-slice: dark rim, light top-left, gold, shadow bottom-right), no rounded
+   corners anywhere, each section on its own picture shown as big pixels (img/bg/, 384 px wide, scaled
+   up pixelated), and fireflies drifting over the page (js/fireflies.js) */
+.panel,.shot,.btn,.vid{border-radius:0;border:8px solid transparent;border-image:url(../img/ui/frame.svg) 4 / 8px stretch;box-shadow:0 12px 0 rgba(0,0,0,.28)}
+.panel,.btn,.vid{background:var(--panel) padding-box}
+.shot{padding:0;background:#000 padding-box}
+.shot img,.shot video{border-radius:0}
+.btn-gold{background:linear-gradient(180deg,#ffe08a 0 50%,#f2c75c 50% 100%) padding-box}
+.btn:active{transform:translateY(2px)}
+.chips li,.stat,.tag,.cmd-lore,.ic,.q,.rk,.rp-job,.rp-stage,.rp-step,.short,.recipes li,.cmds li,.nav-links a,.brand img{border-radius:0}
+.chips li{box-shadow:0 0 0 2px var(--edge),inset 0 -3px 0 rgba(0,0,0,.35)}
+.tag{box-shadow:0 0 0 2px var(--edge),inset 0 -2px 0 rgba(0,0,0,.25)}
+/* section headings: a pixel gem before, a stepped rule after */
+.sec-head h2::before{content:"";display:inline-block;width:12px;height:12px;margin-right:12px;vertical-align:.08em;background:var(--gold);box-shadow:3px 3px 0 var(--gold-lo),-2px -2px 0 var(--gold-hi),0 0 0 2px var(--edge)}
+.sec-head::after{height:4px;background:repeating-linear-gradient(90deg,var(--gold-lo) 0 8px,transparent 8px 12px);box-shadow:none}
+/* each section on its own picture: big soft pixels, dimmed, fading in and out at the edges */
+section{position:relative;isolation:isolate;padding-bottom:clamp(40px,7vw,80px)}
+section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sbg) 50% 50%/cover no-repeat;image-rendering:pixelated;opacity:.32;filter:saturate(.95);
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
+#hero{--sbg:url(../img/bg/hero.webp)}
+#reaksi{--sbg:url(../img/bg/reaksi.webp)}
+#commander{--sbg:url(../img/bg/commander.webp)}
+#plane{--sbg:url(../img/bg/plane.webp)}
+#modes{--sbg:url(../img/bg/modes.webp)}
+#sumber{--sbg:url(../img/bg/sumber.webp)}
+#kota{--sbg:url(../img/bg/kota.webp)}
+#arena{--sbg:url(../img/bg/arena.webp)}
+#video{--sbg:url(../img/bg/video.webp)}
+#harga{--sbg:url(../img/bg/harga.webp)}
+/* the element edges under the recipes */
+.edges{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.edges li{display:flex;align-items:center;gap:8px;font-size:12px;padding:6px 8px;background:rgba(0,0,0,.25);box-shadow:inset 3px 0 0 var(--c)}
+.edges img{width:20px;height:20px;flex:none}
+.edges b{color:var(--c);font-weight:700}
+@media (max-width:480px){.edges{grid-template-columns:1fr}}
+/* the fireflies' layer */
+.flies{position:fixed;inset:0;z-index:5;pointer-events:none;image-rendering:pixelated;width:100%;height:100%}
+/* the title's letters bob, one after another (a pixel game's title screen) */
+.title .name .ch{display:inline-block;animation:bob 2.4s steps(4) infinite;animation-delay:calc(var(--i) * .12s)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.title .name .ch{animation:none}}
+.title .name .w{white-space:nowrap}
