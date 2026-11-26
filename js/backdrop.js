@@ -1,7 +1,7 @@
 /* The page's bottom layer changes with the section in view (26 Nov 2026): two fixed layers, the next
    section's picture fades in over the last. The title area shows the first section's. */
 (function () {
-  var V = '?v=3';
+  var V = '?v=4';
   var pics = { hero: 'hero', reaksi: 'reaksi', commander: 'commander', plane: 'plane', modes: 'modes', sumber: 'sumber', kota: 'kota', arena: 'arena', video: 'video', harga: 'harga' };
   var a = document.createElement('div'), b = document.createElement('div');
   a.className = b.className = 'bd';
