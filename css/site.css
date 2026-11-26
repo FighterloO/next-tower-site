@@ -18,7 +18,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--px)
   background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.012) 3px 4px)}
 img{max-width:100%;display:block}
 /* The page backdrop: a snow battle, dim and soft, fixed behind everything (user, 5 Nov 2026) */
-body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(17,12,31,.82),rgba(17,12,31,.7) 50%,rgba(17,12,31,.86)),url(../img/bg.webp) 50% 50%/cover no-repeat}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(17,12,31,.94),rgba(17,12,31,.9) 50%,rgba(17,12,31,.96)),url(../img/bg.webp) 50% 50%/cover no-repeat}
 a{color:var(--gold)}
 h1,h2,h3,p{margin:0}
 :focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
@@ -353,18 +353,18 @@ section{padding:clamp(40px,7vw,80px) 0 0}
 .sec-head::after{height:4px;background:repeating-linear-gradient(90deg,var(--gold-lo) 0 8px,transparent 8px 12px);box-shadow:none}
 /* each section on its own picture: big soft pixels, dimmed, fading in and out at the edges */
 section{position:relative;isolation:isolate;padding-bottom:clamp(40px,7vw,80px)}
-section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sbg) 50% 50%/cover no-repeat;image-rendering:pixelated;opacity:.32;
+section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sbg) 50% 50%/cover no-repeat;image-rendering:pixelated;opacity:.62;
   -webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
-#hero{--sbg:url(../img/bg/hero.webp)}
-#reaksi{--sbg:url(../img/bg/reaksi.webp)}
-#commander{--sbg:url(../img/bg/commander.webp)}
-#plane{--sbg:url(../img/bg/plane.webp)}
-#modes{--sbg:url(../img/bg/modes.webp)}
-#sumber{--sbg:url(../img/bg/sumber.webp)}
-#kota{--sbg:url(../img/bg/kota.webp)}
-#arena{--sbg:url(../img/bg/arena.webp)}
-#video{--sbg:url(../img/bg/video.webp)}
-#harga{--sbg:url(../img/bg/harga.webp)}
+#hero{--sbg:url(../img/bg/hero.webp?v=3)}
+#reaksi{--sbg:url(../img/bg/reaksi.webp?v=3)}
+#commander{--sbg:url(../img/bg/commander.webp?v=3)}
+#plane{--sbg:url(../img/bg/plane.webp?v=3)}
+#modes{--sbg:url(../img/bg/modes.webp?v=3)}
+#sumber{--sbg:url(../img/bg/sumber.webp?v=3)}
+#kota{--sbg:url(../img/bg/kota.webp?v=3)}
+#arena{--sbg:url(../img/bg/arena.webp?v=3)}
+#video{--sbg:url(../img/bg/video.webp?v=3)}
+#harga{--sbg:url(../img/bg/harga.webp?v=3)}
 /* the element edges under the recipes */
 .edges{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .edges li{display:flex;align-items:center;gap:8px;font-size:12px;padding:6px 8px;background:rgba(0,0,0,.25);box-shadow:inset 3px 0 0 var(--c)}
@@ -420,3 +420,6 @@ section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(-
    pictures, no blur on the title's, and the browser skips laying out and painting sections off screen */
 section{content-visibility:auto;contain-intrinsic-size:auto 900px}
 .flies{will-change:transform}
+/* each section's own picture leads (the shared backdrop showed through the same everywhere, user 26 Nov 2026);
+   a dark wash keeps the text readable on it */
+section::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(17,12,31,.55),rgba(17,12,31,.35) 40%,rgba(17,12,31,.55))}
