@@ -16,7 +16,7 @@
     H = Math.ceil(innerHeight / K);
     c.width = W;
     c.height = H;
-    var n = Math.round(Math.min(34, Math.max(12, (W * H) / 2600)));
+    var n = Math.round(Math.min(26, Math.max(10, (W * H) / 3200)));
     while (flies.length < n) flies.push(fly());
     flies.length = n;
   }
@@ -28,8 +28,13 @@
     x.fillStyle = fill;
     x.fillRect(px_, py_, 1, 1);
   }
+  // 30 frames a second, and still while the page scrolls (the scroll keeps its frames to itself)
+  var scrolling = 0;
+  addEventListener('scroll', function () { scrolling = performance.now(); }, { passive: true });
   function frame(now) {
     if (!run) return;
+    requestAnimationFrame(frame);
+    if (now - (last || 0) < 32 || now - scrolling < 160) return;
     var dt = Math.min(0.05, (now - (last || now)) / 1000);
     last = now;
     x.clearRect(0, 0, W, H);
@@ -54,7 +59,6 @@
       px(X, Y, f.col[0]);
     }
     x.globalAlpha = 1;
-    requestAnimationFrame(frame);
   }
   addEventListener('resize', size);
   document.addEventListener('visibilitychange', function () {

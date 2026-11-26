@@ -18,7 +18,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--px)
   background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.012) 3px 4px)}
 img{max-width:100%;display:block}
 /* The page backdrop: a snow battle, dim and soft, fixed behind everything (user, 5 Nov 2026) */
-body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(17,12,31,.82),rgba(17,12,31,.7) 50%,rgba(17,12,31,.86)),url(../img/bg.webp) 50% 50%/cover no-repeat;filter:saturate(.85)}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(17,12,31,.82),rgba(17,12,31,.7) 50%,rgba(17,12,31,.86)),url(../img/bg.webp) 50% 50%/cover no-repeat}
 a{color:var(--gold)}
 h1,h2,h3,p{margin:0}
 :focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
@@ -44,7 +44,7 @@ h1,h2,h3,p{margin:0}
 
 /* Hero */
 .hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(36px,7vw,84px) 0 clamp(40px,7vw,80px)}
-.hero-bg{position:absolute;inset:-8px;z-index:-1;background:url(../img/town.webp) 50% 40%/cover;filter:brightness(.36) saturate(.9) blur(2px);-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent)}
+.hero-bg{position:absolute;inset:-8px;z-index:-1;background:url(../img/town.webp) 50% 40%/cover;filter:brightness(.36);-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,12,31,.25),rgba(17,12,31,.15) 45%,rgba(17,12,31,0) 100%)}
 .hero .wrap{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
 @media (min-width:900px){.hero .wrap{grid-template-columns:.95fr 1.05fr;gap:40px}}
@@ -353,7 +353,7 @@ section{padding:clamp(40px,7vw,80px) 0 0}
 .sec-head::after{height:4px;background:repeating-linear-gradient(90deg,var(--gold-lo) 0 8px,transparent 8px 12px);box-shadow:none}
 /* each section on its own picture: big soft pixels, dimmed, fading in and out at the edges */
 section{position:relative;isolation:isolate;padding-bottom:clamp(40px,7vw,80px)}
-section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sbg) 50% 50%/cover no-repeat;image-rendering:pixelated;opacity:.32;filter:saturate(.95);
+section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sbg) 50% 50%/cover no-repeat;image-rendering:pixelated;opacity:.32;
   -webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent)}
 #hero{--sbg:url(../img/bg/hero.webp)}
 #reaksi{--sbg:url(../img/bg/reaksi.webp)}
@@ -416,3 +416,7 @@ section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(-
 .rp-skills b{display:block;color:var(--cd);font-size:12px;letter-spacing:.06em}
 .rp-ultrow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px;align-items:center}
 @media (max-width:600px){.rp-skills,.rp-ultrow{grid-template-columns:1fr}}
+/* (speed, 26 Nov 2026: "kaya ngelag nggak 60 fps"): no filter on the fixed backdrop or the section
+   pictures, no blur on the title's, and the browser skips laying out and painting sections off screen */
+section{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.flies{will-change:transform}
