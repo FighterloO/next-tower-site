@@ -15,6 +15,10 @@
     return '<i class="spr ' + (cls || '') + '" aria-hidden="true" style="--sw:' + w * s + 'px;--sh:' + ht * s + 'px;--sy:' + -r * ht * s +
       'px;background-image:url(img/ranks/' + h.id + '.png);background-size:' + w * 6 * s + 'px ' + ht * 6 * s + 'px"></i>';
   }
+  // a looping preview clip from the game's Library (img/clips: s_<element>_<a|b>, u_<ultimate>)
+  function clip(id, name) {
+    return id ? '<img class="rp-clip" src="img/clips/' + id + '.webp" alt="' + esc(name) + ' preview" width="256" height="160" loading="lazy">' : '';
+  }
   function bigScale(h) { return Math.max(2, Math.round(170 / h.sprite.h)); }
 
   function render() {
@@ -36,8 +40,8 @@
           '<div class="rp-txt"><b>Deploy</b><span>Basic ' + esc(h.el) + ' attack</span></div></li>' +
         '<li class="rp-step' + (look === 'r2' ? ' on' : '') + '"><b class="rk">R2</b>' +
           '<button type="button" class="rp-look-btn" data-look="r2" aria-pressed="' + (look === 'r2') + '">' + spr(h, 'r2', 2) + '</button>' +
-          '<div class="rp-txt"><b>Pick a skill</b><ul class="rp-chips">' + h.skills.map(function (s) {
-            return '<li title="' + esc(s.desc) + '"><b>' + esc(s.name) + '</b><span>' + esc(s.desc) + '</span></li>';
+          '<div class="rp-txt"><b>Pick a skill</b><ul class="rp-skills">' + h.skills.map(function (s) {
+            return '<li>' + clip(s.clip, s.name) + '<p><b>' + esc(s.name) + '</b><span>' + esc(s.desc) + '</span></p></li>';
           }).join('') + '</ul></div></li>' +
         '<li class="rp-step rp-jobs' + (look !== 'r1' && look !== 'r2' ? ' on' : '') + '"><b class="rk">R3</b>' +
           '<div class="rp-txt"><b>Pick a job</b><div class="rp-jobgrid">' + h.jobs.map(function (j) {
@@ -46,7 +50,7 @@
           }).join('') + '</div></div></li>' +
         '<li class="rp-step rp-ult"><b class="rk">R4</b>' +
           '<div class="rp-txt"><b>Ultimate · ' + esc(job.name) + '</b>' +
-          '<p class="rp-ultname">' + esc(job.ult) + '</p><p class="rp-ultfx">' + esc(job.what) + ' · ' + esc(job.fx) + '</p>' +
+          '<div class="rp-ultrow">' + clip(job.clip, job.ult) + '<div><p class="rp-ultname">' + esc(job.ult) + '</p><p class="rp-ultfx">' + esc(job.what) + ' · ' + esc(job.fx) + '</p></div></div>' +
           '<ul class="rp-chips alts">' + job.alts.map(function (a) { return '<li><b>' + esc(a) + '</b></li>'; }).join('') + '</ul></div></li>' +
       '</ol>';
   }

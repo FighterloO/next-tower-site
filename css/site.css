@@ -145,8 +145,8 @@ section{padding:clamp(40px,7vw,80px) 0 0}
 .plane.locked .plane-art{display:grid;place-items:center;background:repeating-linear-gradient(45deg,#1b1430 0 10px,#160f28 10px 20px)}
 .plane.locked .plane-art svg{width:56px;height:56px;opacity:.9}
 .plane.locked h3{color:var(--dim)}
-.days{display:flex;gap:6px;margin-top:4px}
-.days span{font-size:11px;padding:2px 6px;border-radius:3px;background:rgba(0,0,0,.35);color:var(--ink)}
+.days{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.days span{font-size:11px;padding:2px 6px;border-radius:0;white-space:nowrap;background:rgba(0,0,0,.35);color:var(--ink)}
 
 /* Tower mode */
 .tower{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:clamp(18px,3vw,28px);position:relative;overflow:hidden}
@@ -379,3 +379,40 @@ section::before{content:"";position:absolute;inset:0;z-index:-1;background:var(-
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.title .name .ch{animation:none}}
 .title .name .w{white-space:nowrap}
+/* the rank path on the Library's paper (user, 26 Nov 2026: "model kertas texture kaya di library termasuk
+   preview skillnya"): ink on parchment, the element colours darkened to read on it, a looping clip of
+   each skill and of the job's ultimate (img/clips, the game's own Library clips) */
+.rankpath{--ink2:#3a2410;--ink3:#6a4426;--rule:#b08a5a;--cd:color-mix(in srgb,var(--c) 50%,#3a2410);
+  background:url(../img/ui/paper.webp) 50% 50%/cover,#e8d2a6;background-origin:padding-box;background-clip:padding-box;color:var(--ink2)}
+.rankpath .rp-stage{background:radial-gradient(ellipse 70% 50% at 50% 30%,color-mix(in srgb,var(--c) 30%,transparent),transparent 75%),rgba(74,42,18,.1);box-shadow:inset 0 0 0 2px rgba(74,42,18,.35)}
+.rankpath .rp-figure{background:radial-gradient(ellipse 40% 8% at 50% 96%,rgba(58,36,16,.45),transparent 70%)}
+.rankpath .rp-look{color:var(--cd)}
+.rankpath .rp-stage h3{color:var(--ink2);text-shadow:none}
+.rankpath .rp-title{color:var(--ink3)}
+.rankpath .rp-sig{color:var(--ink2)}
+.rankpath .rp-sig b{color:#8a5a1c}
+.rankpath .stat{background:rgba(74,42,18,.1);border-color:var(--rule)}
+.rankpath .stat b{color:var(--ink2)}
+.rankpath .stat span{color:var(--ink3)}
+.rankpath .rp-step{background:rgba(74,42,18,.08);border-color:transparent}
+.rankpath .rp-step.on{border-color:#8a5a1c;background:rgba(242,199,92,.22)}
+.rankpath .rk{color:var(--ink2);border-color:var(--rule);background:rgba(255,246,228,.4)}
+.rankpath .rp-step.on .rk,.rankpath .rp-ult .rk{border-color:#8a5a1c;background:rgba(242,199,92,.4)}
+.rankpath .rp-txt>b{color:var(--ink2)}
+.rankpath .rp-txt>span{color:var(--ink3)}
+.rankpath .rp-look-btn,.rankpath .rp-job{background:rgba(74,42,18,.12);border-color:var(--rule);color:var(--ink2)}
+.rankpath .rp-look-btn:hover,.rankpath .rp-job:hover{border-color:#8a5a1c}
+.rankpath .rp-look-btn[aria-pressed=true],.rankpath .rp-job[aria-pressed=true]{border-color:#8a5a1c;background:rgba(242,199,92,.35)}
+.rankpath .rp-job b{color:var(--ink2)}
+.rankpath .rp-job span{color:var(--ink3)}
+.rankpath .rp-chips li{background:rgba(255,246,228,.45);border-color:var(--rule)}
+.rankpath .rp-chips.alts li b{color:var(--ink2)}
+.rankpath .rp-ultname{color:var(--cd);text-shadow:none}
+.rankpath .rp-ultfx{color:var(--ink2)}
+.rp-clip{display:block;width:100%;height:auto;aspect-ratio:16/10;image-rendering:pixelated;background:#2a180c;box-shadow:0 0 0 3px #3a2410,0 4px 0 rgba(58,36,16,.35)}
+.rp-skills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rp-skills li{display:grid;gap:8px;align-content:start}
+.rp-skills p{font-size:11px;line-height:1.45;color:var(--ink3)}
+.rp-skills b{display:block;color:var(--cd);font-size:12px;letter-spacing:.06em}
+.rp-ultrow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px;align-items:center}
+@media (max-width:600px){.rp-skills,.rp-ultrow{grid-template-columns:1fr}}
